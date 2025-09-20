@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="315.0" prefWidth="460.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.CreateAccountController">
+   <children>
+      <MenuBar prefWidth="599.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="400.0" prefWidth="700.0">
+         <children>
+            <HBox spacing="20.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
+               <children>
+                  <VBox prefHeight="400.0" prefWidth="3158.0">
+                     <children>
+                        <Label text="First Name">
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </Label>
+                        <TextField id="firstNameField" fx:id="firstNameField" promptText="First Name">
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </TextField>
+                        <Label layoutX="30.0" layoutY="10.0" text="Last Name">
+                           <VBox.margin>
+                              <Insets top="5.0" />
+                           </VBox.margin>
+                        </Label>
+                        <TextField id="lastNameField" fx:id="lastNameField" promptText="Last Name">
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </TextField>
+                        <Label layoutX="30.0" layoutY="52.0" text="Username">
+                           <VBox.margin>
+                              <Insets top="5.0" />
+                           </VBox.margin>
+                        </Label>
+                        <TextField id="usernameField" fx:id="usernameField" promptText="Username">
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </TextField>
+                        <Label layoutX="30.0" layoutY="94.0" text="Password">
+                           <VBox.margin>
+                              <Insets top="5.0" />
+                           </VBox.margin>
+                        </Label>
+                        <PasswordField id="passwordField" fx:id="passwordField" promptText="Password">
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </PasswordField>
+                        <Button id="createButton" fx:id="createAccountButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#createAccount" prefHeight="25.0" prefWidth="3018.0" text="Create!" textAlignment="CENTER">
+                           <VBox.margin>
+                              <Insets top="25.0" />
+                           </VBox.margin>
+                        </Button>
+                     </children>
+                  </VBox>
+                  <VBox minWidth="185.0" prefHeight="186.0" prefWidth="185.0" style="-fx-background-color: DDDDDD; -fx-background-radius: 25px;">
+                     <children>
+                        <Label fx:id="chooseRoleLabel" prefHeight="17.0" prefWidth="159.0" text="Choose a role/roles:">
+                           <VBox.margin>
+                              <Insets top="20.0" />
+                           </VBox.margin>
+                        </Label>
+                        <CheckBox fx:id="checkbox1" mnemonicParsing="false" prefHeight="18.0" prefWidth="114.0" text="Sales Officer">
+                           <VBox.margin>
+                              <Insets top="20.0" />
+                           </VBox.margin>
+                        </CheckBox>
+                        <CheckBox fx:id="checkbox2" mnemonicParsing="false" prefHeight="18.0" prefWidth="136.0" text="Account Manager">
+                           <VBox.margin>
+                              <Insets top="20.0" />
+                           </VBox.margin>
+                        </CheckBox>
+                        <CheckBox fx:id="checkbox3" mnemonicParsing="false" prefHeight="18.0" prefWidth="158.0" text="Sales Manager">
+                           <VBox.margin>
+                              <Insets top="20.0" />
+                           </VBox.margin>
+                        </CheckBox>
+                        <CheckBox fx:id="checkbox4" mnemonicParsing="false" prefHeight="18.0" prefWidth="111.0" text="Administrator">
+                           <VBox.margin>
+                              <Insets top="20.0" />
+                           </VBox.margin>
+                        </CheckBox>
+                     </children>
+                     <padding>
+                        <Insets left="30.0" />
+                     </padding>
+                  </VBox>
+               </children>
+            </HBox>
+            <Label fx:id="errorLabel" minHeight="20.0" textFill="#dd0d0d">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <HBox prefHeight="20.0" style="-fx-background-color: CCCCCC;" />
+   </children>
+</VBox>

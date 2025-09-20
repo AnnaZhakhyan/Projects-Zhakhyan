@@ -1,0 +1,50 @@
+@options
+@packages
+@argfile
+--module-path
+'C:/Users/liamj/GitRepos/prj2-2024-18/implementation/DataRecords/target/DataRecords-1.0-SNAPSHOT.jar'
+--patch-module
+datarecords_module='C:/Users/liamj/GitRepos/prj2-2024-18/implementation/DataRecords/src/main/java;C:/Users/liamj/GitRepos/prj2-2024-18/implementation/DataRecords/target/generated-sources/annotations'
+-encoding
+'UTF-8'
+-protected
+--release
+21
+--module-source-path
+'C:/Users/liamj/GitRepos/prj2-2024-18/implementation/DataRecords/target/apidocs/src'
+-author
+-bottom
+'Copyright &#169; 2024. All rights reserved.'
+-charset
+'UTF-8'
+-d
+'C:/Users/liamj/GitRepos/prj2-2024-18/implementation/DataRecords/target/apidocs'
+-docencoding
+'UTF-8'
+-doctitle
+'DataRecords 1.0-SNAPSHOT API'
+-use
+-version
+-windowtitle
+'DataRecords 1.0-SNAPSHOT API'
+datarecords
+'C:/Users/liamj/GitRepos/prj2-2024-18/implementation/DataRecords/src/main/java/module-info.java'
+C:\Users\liamj\GitRepos\prj2-2024-18\implementation\DataRecords\target\apidocs\allclasses-index.html = 1716977024977
+C:\Users\liamj\GitRepos\prj2-2024-18\implementation\DataRecords\target\apidocs\allpackages-index.html = 1716977024981
+C:\Users\liamj\GitRepos\prj2-2024-18\implementation\DataRecords\target\apidocs\copy.svg = 1716977025016
+C:\Users\liamj\GitRepos\prj2-2024-18\implementation\DataRecords\target\apidocs\element-list = 1716977024915
+C:\Users\liamj\GitRepos\prj2-2024-18\implementation\DataRecords\target\apidocs\help-doc.html = 1716977025010
+C:\Users\liamj\GitRepos\prj2-2024-18\implementation\DataRecords\target\apidocs\index-all.html = 1716977025000
+C:\Users\liamj\GitRepos\prj2-2024-18\implementation\DataRecords\target\apidocs\index.html = 1716977025005
+C:\Users\liamj\GitRepos\prj2-2024-18\implementation\DataRecords\target\apidocs\link.svg = 1716977025018
+C:\Users\liamj\GitRepos\prj2-2024-18\implementation\DataRecords\target\apidocs\member-search-index.js = 1716977024985
+C:\Users\liamj\GitRepos\prj2-2024-18\implementation\DataRecords\target\apidocs\module-search-index.js = 1716977024982
+C:\Users\liamj\GitRepos\prj2-2024-18\implementation\DataRecords\target\apidocs\overview-tree.html = 1716977024963
+C:\Users\liamj\GitRepos\prj2-2024-18\implementation\DataRecords\target\apidocs\package-search-index.js = 1716977024983
+C:\Users\liamj\GitRepos\prj2-2024-18\implementation\DataRecords\target\apidocs\script.js = 1716977025014
+C:\Users\liamj\GitRepos\prj2-2024-18\implementation\DataRecords\target\apidocs\search-page.js = 1716977025022
+C:\Users\liamj\GitRepos\prj2-2024-18\implementation\DataRecords\target\apidocs\search.html = 1716977025003
+C:\Users\liamj\GitRepos\prj2-2024-18\implementation\DataRecords\target\apidocs\search.js = 1716977025021
+C:\Users\liamj\GitRepos\prj2-2024-18\implementation\DataRecords\target\apidocs\stylesheet.css = 1716977025013
+C:\Users\liamj\GitRepos\prj2-2024-18\implementation\DataRecords\target\apidocs\tag-search-index.js = 1716977024986
+C:\Users\liamj\GitRepos\prj2-2024-18\implementation\DataRecords\target\apidocs\type-search-index.js = 1716977024984

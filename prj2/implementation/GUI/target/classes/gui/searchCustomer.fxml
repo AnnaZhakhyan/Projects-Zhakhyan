@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="270.0" prefWidth="531.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.SearchCustomerController">
+   <children>
+      <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="270.0" prefWidth="470.0">
+         <children>
+            <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="547.0" prefWidth="310.0" spacing="10.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
+               <children>
+                  <HBox alignment="TOP_RIGHT" spacing="10.0">
+                     <children>
+                        <TextField fx:id="textField" maxHeight="1.7976931348623157E308" prefHeight="26.0" prefWidth="1000.0" />
+                        <Button fx:id="search" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#searchFor" prefHeight="26.0" prefWidth="87.0" text="Search" />
+                     </children>
+                  </HBox>
+                  <TableView fx:id="table" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="1500.0" prefWidth="350.0">
+                    <columns>
+                        <TableColumn fx:id="id_col" prefWidth="34.0" text="ID" />
+                      <TableColumn fx:id="nme_col" prefWidth="298.0" text="Name" />
+                      <TableColumn fx:id="bdy_col" prefWidth="140.0" text="Birthday" />
+                    </columns>
+                  </TableView>
+                  <HBox alignment="TOP_RIGHT" spacing="10.0">
+                     <children>
+                        <HBox prefHeight="26.0" prefWidth="648.0" spacing="10.0">
+                           <children>
+                              <Button fx:id="createPass" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="26.0" prefWidth="143.0" text="Create a Client" />
+                              <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="26.0" prefWidth="143.0" text="Edit a Client" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="TOP_RIGHT" spacing="10.0">
+                           <children>
+                              <Button fx:id="selectPass" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="26.0" prefWidth="87.0" text="Select" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>

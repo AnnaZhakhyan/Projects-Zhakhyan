@@ -1,0 +1,55 @@
+@options
+@packages
+@argfile
+--module-path
+'C:/Users/liamj/GitRepos/prj2-2024-18/implementation/DataRecords/target/DataRecords-1.0-SNAPSHOT.jar;C:/Users/liamj/GitRepos/prj2-2024-18/implementation/Persistence/target/Persistence-1.0-SNAPSHOT.jar;C:/Users/liamj/GitRepos/prj2-2024-18/implementation/BusinessLogic/target/BusinessLogic-1.0-SNAPSHOT.jar;C:/Users/liamj/.m2/repository/org/postgresql/postgresql/42.7.3/postgresql-42.7.3.jar'
+--patch-module
+businesslogic_module='C:/Users/liamj/GitRepos/prj2-2024-18/implementation/BusinessLogic/src/main/java;C:/Users/liamj/GitRepos/prj2-2024-18/implementation/BusinessLogic/target/generated-sources/annotations'
+-encoding
+'UTF-8'
+-protected
+--release
+21
+--module-source-path
+'C:/Users/liamj/GitRepos/prj2-2024-18/implementation/BusinessLogic/target/apidocs/src'
+-author
+-bottom
+'Copyright &#169; 2024. All rights reserved.'
+-charset
+'UTF-8'
+-d
+'C:/Users/liamj/GitRepos/prj2-2024-18/implementation/BusinessLogic/target/apidocs'
+-docencoding
+'UTF-8'
+-doctitle
+'BusinessLogic 1.0-SNAPSHOT API'
+-linkoffline
+'https://fontysvenlo.github.io/informaticspom/airlineinformationsystem/DataRecords/apidocs' 'C:/Users/liamj/GitRepos/prj2-2024-18/implementation/DataRecords/target/apidocs'
+-linkoffline
+'https://fontysvenlo.github.io/informaticspom/airlineinformationsystem/Persistence/apidocs' 'C:/Users/liamj/GitRepos/prj2-2024-18/implementation/Persistence/target/apidocs'
+-use
+-version
+-windowtitle
+'BusinessLogic 1.0-SNAPSHOT API'
+businesslogic
+'C:/Users/liamj/GitRepos/prj2-2024-18/implementation/BusinessLogic/src/main/java/module-info.java'
+C:\Users\liamj\GitRepos\prj2-2024-18\implementation\BusinessLogic\target\apidocs\allclasses-index.html = 1716977032911
+C:\Users\liamj\GitRepos\prj2-2024-18\implementation\BusinessLogic\target\apidocs\allpackages-index.html = 1716977032913
+C:\Users\liamj\GitRepos\prj2-2024-18\implementation\BusinessLogic\target\apidocs\constant-values.html = 1716977032869
+C:\Users\liamj\GitRepos\prj2-2024-18\implementation\BusinessLogic\target\apidocs\copy.svg = 1716977032941
+C:\Users\liamj\GitRepos\prj2-2024-18\implementation\BusinessLogic\target\apidocs\element-list = 1716977032832
+C:\Users\liamj\GitRepos\prj2-2024-18\implementation\BusinessLogic\target\apidocs\help-doc.html = 1716977032935
+C:\Users\liamj\GitRepos\prj2-2024-18\implementation\BusinessLogic\target\apidocs\index-all.html = 1716977032928
+C:\Users\liamj\GitRepos\prj2-2024-18\implementation\BusinessLogic\target\apidocs\index.html = 1716977032932
+C:\Users\liamj\GitRepos\prj2-2024-18\implementation\BusinessLogic\target\apidocs\link.svg = 1716977032949
+C:\Users\liamj\GitRepos\prj2-2024-18\implementation\BusinessLogic\target\apidocs\member-search-index.js = 1716977032918
+C:\Users\liamj\GitRepos\prj2-2024-18\implementation\BusinessLogic\target\apidocs\module-search-index.js = 1716977032915
+C:\Users\liamj\GitRepos\prj2-2024-18\implementation\BusinessLogic\target\apidocs\overview-tree.html = 1716977032900
+C:\Users\liamj\GitRepos\prj2-2024-18\implementation\BusinessLogic\target\apidocs\package-search-index.js = 1716977032916
+C:\Users\liamj\GitRepos\prj2-2024-18\implementation\BusinessLogic\target\apidocs\script.js = 1716977032940
+C:\Users\liamj\GitRepos\prj2-2024-18\implementation\BusinessLogic\target\apidocs\search-page.js = 1716977032954
+C:\Users\liamj\GitRepos\prj2-2024-18\implementation\BusinessLogic\target\apidocs\search.html = 1716977032931
+C:\Users\liamj\GitRepos\prj2-2024-18\implementation\BusinessLogic\target\apidocs\search.js = 1716977032952
+C:\Users\liamj\GitRepos\prj2-2024-18\implementation\BusinessLogic\target\apidocs\stylesheet.css = 1716977032938
+C:\Users\liamj\GitRepos\prj2-2024-18\implementation\BusinessLogic\target\apidocs\tag-search-index.js = 1716977032919
+C:\Users\liamj\GitRepos\prj2-2024-18\implementation\BusinessLogic\target\apidocs\type-search-index.js = 1716977032917

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="250.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.RegisterPassengerController">
+   <children>
+      <AnchorPane prefHeight="478.0" prefWidth="250.0">
+         <children>
+            <VBox prefHeight="200.0" prefWidth="230.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+               <children>
+                  <Label alignment="CENTER" prefHeight="0.0" prefWidth="230.0" text="Register a new Customer" textAlignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </Label>
+                  <Separator prefHeight="10.0" prefWidth="200.0" visible="false" />
+                  <HBox spacing="10.0">
+                     <children>
+                        <VBox>
+                           <children>
+                              <Label text="First Name" />
+                              <TextField fx:id="firstField" promptText="First Name" />
+                           </children>
+                        </VBox>
+                        <VBox>
+                           <children>
+                              <Label text="Last Name" />
+                              <TextField fx:id="lastField" promptText="Last Name" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <Label text="Email" />
+                  <TextField fx:id="emailField" promptText="Email" />
+                  <HBox spacing="10.0">
+                     <children>
+                        <VBox>
+                           <children>
+                              <Label text="Address" />
+                              <TextField fx:id="addressField" promptText="Address" />
+                           </children>
+                        </VBox>
+                        <VBox>
+                           <children>
+                              <Label text="Birthdate" />
+                              <DatePicker fx:id="bdayPicker" prefHeight="26.0" prefWidth="209.0" promptText="Birthdate" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <Separator prefHeight="10.0" prefWidth="200.0" visible="false" />
+                  <Separator prefHeight="10.0" prefWidth="200.0" visible="false" />
+                  <HBox alignment="TOP_CENTER" prefWidth="200.0" spacing="20.0" />
+                  <Separator prefHeight="20.0" prefWidth="200.0" visible="false" />
+                  <Button fx:id="saveButton" mnemonicParsing="false" prefHeight="26.0" prefWidth="243.0" text="Save">
+                     <VBox.margin>
+                        <Insets left="50.0" right="50.0" />
+                     </VBox.margin>
+                  </Button>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>

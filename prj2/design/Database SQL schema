@@ -1,0 +1,193 @@
+CREATE TABLE Passanger (
+    "Goverment Name" CHAR(255) NOT NULL,
+    "Birth Date" DATE NOT NULL,
+    "Passport Number" SERIAL NOT NULL,
+    "BookingBooking ID" INT NOT NULL,
+    PRIMARY KEY ("Passport Number")
+);
+
+CREATE TABLE Seat (
+    "Seat Nr" CHAR(3) NOT NULL,
+    "Seat taken (boolean)" CHAR(255) NOT NULL,
+    "PlanePlane ICAO" CHAR(10) NOT NULL,
+    "PlaneIATA Plane" CHAR(10) NOT NULL,
+    PRIMARY KEY ("Seat Nr", "PlanePlane ICAO", "PlaneIATA Plane")
+);
+
+CREATE TABLE Route (
+    "Airplane ID" INT NOT NULL,
+    "Source Airport" INT NOT NULL,
+    "Destination Airport" INT NOT NULL,
+    Stops INT NOT NULL,
+    "Route ID" SERIAL NOT NULL,
+    AirportID CHAR(10),
+    PRIMARY KEY ("Route ID")
+);
+
+CREATE TABLE booking (
+    "id" SERIAL NOT NULL,
+    "employee" INT NOT NULL,
+    "timerecord" TIMESTAMP NOT NULL,
+    "customer" INT NOT NULL,
+    "email" CHAR(24) NOT NULL,
+    "adress" CHAR(24) NOT NULL,
+    "price" INT NOT NULL,
+    PRIMARY KEY ("id"),
+    FOREIGN KEY (employee) REFERENCES employee(id),
+    FOREIGN KEY (customer) REFERENCES clients(id)
+);
+
+CREATE TYPE docType AS ENUM ('Passport', 'ID Card');
+CREATE TABLE tickets (
+    "id" SERIAL NOT NULL,
+    "passenger" INT NOT NULL,
+    "doc_type" docType NOT NULL,
+    "doc_id" INT NOT NULL,
+    "seat" CHAR(3) NOT NULL,
+    "booking" INT NOT NULL,
+    "flight" INT NOT NULL,
+    PRIMARY KEY ("id"),
+    FOREIGN KEY (passenger) REFERENCES clients(id),
+    FOREIGN KEY (booking) REFERENCES booking(id),
+    FOREIGN KEY (flight) REFERENCES flights(id)
+);
+
+CREATE TABLE extras (
+    "id" SERIAL NOT NULL,
+    "extra" CHAR(24) NOT NULL,
+    "ticket" INT NOT NULL,
+    PRIMARY KEY ("id"),
+    FOREIGN KEY (ticket) REFERENCES tickets(id)
+);
+
+CREATE TABLE static_discounts (
+    "id" SERIAL NOT NULL,
+    "ticket" INT NOT NULL,
+    "amount" CHAR(24) NOT NULL,
+    "proc" BOOLEAN NOT NULL,
+    PRIMARY KEY ("id"),
+    FOREIGN KEY (ticket) REFERENCES tickets(id)
+);
+
+CREATE TYPE pos AS ENUM ('Sale Officer', 'Sale Manager', 'Account Manager', 'Admin');
+CREATE TABLE Employee (
+    firstname CHAR(255) NOT NULL,
+    lastname CHAR(255) NOT NULL,
+    ID SERIAL NOT NULL,
+    pos pos NOT NULL,
+    username CHAR(255) NOT NULL,
+    password CHAR(255) NOT NULL,
+    PRIMARY KEY (ID)
+);
+
+CREATE TABLE Customer (
+    ID SERIAL NOT NULL,
+    "First Name" CHAR(255) NOT NULL,
+    "Last Name" CHAR(255) NOT NULL,
+    "Birth Date" DATE NOT NULL,
+    Address CHAR(255) NOT NULL,
+    Email CHAR(255) NOT NULL,
+    "Payment Info (boolean)" INT NOT NULL,
+    PRIMARY KEY (ID)
+);
+
+CREATE TABLE Airline (
+    Name INT NOT NULL,
+    "Active" BOOLEAN NOT NULL,
+    IATA CHAR(10) NOT NULL,
+    PRIMARY KEY (ICAO)
+);
+
+CREATE TABLE Airport (
+    Name CHAR(255) NOT NULL,
+    City CHAR(255) NOT NULL,
+    "Timezone Name" CHAR(255) NOT NULL,
+    "Timezone Number" INT NOT NULL,
+    ID CHAR(10) NOT NULL,
+    PRIMARY KEY (ID)
+);
+
+CREATE TABLE Plane (
+    "Plane ICAO" CHAR(10) NOT NULL,
+    "IATA Plane" CHAR(10) NOT NULL,
+    Model CHAR(255) NOT NULL,
+    AirlineICAO CHAR(10) NOT NULL,
+    PRIMARY KEY ("Plane ICAO", "IATA Plane")
+);
+
+CREATE TABLE "Route flewn by airline" (
+    AirlineICAO2 CHAR(10) NOT NULL,
+    "RouteSource Airport" INT NOT NULL,
+    "RouteDestination Airport" INT NOT NULL,
+    "RouteRoute ID" INT NOT NULL,
+    PRIMARY KEY (AirlineICAO2, "RouteRoute ID")
+);
+
+CREATE TABLE flights (
+    id SERIAL NOT NULL,
+    "dep_date" DATE NOT NULL,
+    "arr_date" DATE NOT null,
+    "dep_time" TIME NOT NULL,
+    "arr_time" TIME NOT null,
+    "route" INT4 NOT null,
+    PriceID INT,
+    FOREIGN KEY (route) REFERENCES route(route_id),
+    PRIMARY KEY (id)
+);
+
+CREATE TABLE "dynamic discount" (
+    ID SERIAL NOT NULL,
+    "Timeframe start" DATE NOT NULL,
+    "Timeframe finish" DATE NOT NULL,
+    Amount INT NOT NULL,
+    PRIMARY KEY (ID)
+);
+
+CREATE TABLE Price (
+    "Price per kilometer" INT NOT NULL,
+    ID SERIAL NOT NULL,
+    PRIMARY KEY (ID)
+);
+
+ALTER TABLE Ticket ADD CONSTRAINT FKTicket233986 FOREIGN KEY ("SeatSeat Nr", "SeatPlanePlane ICAO", "SeatPlaneIATA Plane") REFERENCES Seat ("Seat Nr", "PlanePlane ICAO", "PlaneIATA Plane");
+ALTER TABLE Ticket ADD CONSTRAINT FKTicket526015 FOREIGN KEY ("PassangerPassport Number") REFERENCES Passanger ("Passport Number");
+ALTER TABLE Booking ADD CONSTRAINT FKBooking527455 FOREIGN KEY (CustomerID) REFERENCES Customer (ID);
+ALTER TABLE Booking ADD CONSTRAINT FKBooking987296 FOREIGN KEY (EmployeeID) REFERENCES Employee (ID);
+ALTER TABLE Seat ADD CONSTRAINT FKSeat854773 FOREIGN KEY ("PlanePlane ICAO", "PlaneIATA Plane") REFERENCES Plane ("Plane ICAO", "IATA Plane");
+ALTER TABLE "Route flewn by airline" ADD CONSTRAINT "FKRoute flew581930" FOREIGN KEY (AirlineICAO2) REFERENCES Airline (ICAO);
+ALTER TABLE "Route flewn by airline" ADD CONSTRAINT "FKRoute flew68591" FOREIGN KEY ("RouteRoute ID") REFERENCES Route ("Route ID");
+ALTER TABLE Route ADD CONSTRAINT FKRoute102179 FOREIGN KEY (AirportID) REFERENCES Airport (ID);
+ALTER TABLE Ticket ADD CONSTRAINT FKTicket925083 FOREIGN KEY ("BookingBooking ID") REFERENCES Booking ("Booking ID");
+ALTER TABLE Passanger ADD CONSTRAINT FKPassanger487107 FOREIGN KEY ("BookingBooking ID") REFERENCES Booking ("Booking ID");
+ALTER TABLE flight ADD CONSTRAINT FKflight542585 FOREIGN KEY ("PlanePlane ICAO", "PlaneIATA Plane") REFERENCES Plane ("Plane ICAO", "IATA Plane");
+ALTER TABLE Ticket ADD CONSTRAINT FKTicket375296 FOREIGN KEY (flightID) REFERENCES flight (ID);
+ALTER TABLE Plane ADD CONSTRAINT FKPlane403468 FOREIGN KEY (AirlineICAO) REFERENCES Airline (ICAO);
+ALTER TABLE Booking ADD CONSTRAINT FKBooking136309 FOREIGN KEY ("dynamic discountID") REFERENCES "dynamic discount" (ID);
+ALTER TABLE flight ADD CONSTRAINT FKflight153235 FOREIGN KEY (PriceID) REFERENCES Price (ID);
+alter table Booking 
+drop column "Extra legroom(boolean)";
+alter table Booking
+add column "Extra legroom" boolean;
+alter table Booking 
+drop column "Extra luggage(boolean)";
+alter table Booking 
+add column "Extra luggage" boolean;
+alter table Booking
+drop column "Food(boolean)";
+alter table Booking
+add column "Food" boolean;
+alter table airline
+drop column "Active(boolean)";
+alter table airline 
+add column "Active" boolean;
+alter table customer 
+drop column "Payment Info (boolean)";
+alter table customer 
+add column "Payment Info" boolean;
+alter table seat
+drop column "Seat taken (boolean)";
+alter table seat 
+add column "Seat taken" boolean;
+
+
+

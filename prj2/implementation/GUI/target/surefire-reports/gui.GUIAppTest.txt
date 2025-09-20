@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: gui.GUIAppTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 2.169 s <<< FAILURE! -- in gui.GUIAppTest
+gui.GUIAppTest.testAddCustomer(FxRobot) -- Time elapsed: 2.146 s <<< ERROR!
+org.testfx.api.FxRobotException: the query "#firstName" returned no nodes.
+	at gui_module@1.0-SNAPSHOT/gui.GUIAppTest.testAddCustomer(GUIAppTest.java:67)
+

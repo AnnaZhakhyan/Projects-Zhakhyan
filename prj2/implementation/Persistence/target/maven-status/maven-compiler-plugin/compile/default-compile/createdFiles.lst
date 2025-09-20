@@ -1,0 +1,8 @@
+module-info.class
+persistence\DBProvider.class
+persistence\PersistenceFactory.class
+persistence\CustomerStorageServiceImpl.class
+persistence\PersistenceAPI.class
+persistence\PersistenceAPIImpl.class
+persistence\CustomerStorageService.class
+persistence\DatabaseConnection.class

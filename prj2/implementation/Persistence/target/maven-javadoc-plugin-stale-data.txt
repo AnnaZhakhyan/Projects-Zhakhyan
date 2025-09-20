@@ -1,0 +1,52 @@
+@options
+@packages
+@argfile
+--module-path
+'C:/Users/liamj/GitRepos/prj2-2024-18/implementation/DataRecords/target/DataRecords-1.0-SNAPSHOT.jar;C:/Users/liamj/GitRepos/prj2-2024-18/implementation/Persistence/target/Persistence-1.0-SNAPSHOT.jar;C:/Users/liamj/.m2/repository/org/postgresql/postgresql/42.7.3/postgresql-42.7.3.jar'
+--patch-module
+persistence_module='C:/Users/liamj/GitRepos/prj2-2024-18/implementation/Persistence/src/main/java;C:/Users/liamj/GitRepos/prj2-2024-18/implementation/Persistence/target/generated-sources/annotations'
+-encoding
+'UTF-8'
+-protected
+--release
+21
+--module-source-path
+'C:/Users/liamj/GitRepos/prj2-2024-18/implementation/Persistence/target/apidocs/src'
+-author
+-bottom
+'Copyright &#169; 2024. All rights reserved.'
+-charset
+'UTF-8'
+-d
+'C:/Users/liamj/GitRepos/prj2-2024-18/implementation/Persistence/target/apidocs'
+-docencoding
+'UTF-8'
+-doctitle
+'Persistence 1.0-SNAPSHOT API'
+-linkoffline
+'https://fontysvenlo.github.io/informaticspom/airlineinformationsystem/DataRecords/apidocs' 'C:/Users/liamj/GitRepos/prj2-2024-18/implementation/DataRecords/target/apidocs'
+-use
+-version
+-windowtitle
+'Persistence 1.0-SNAPSHOT API'
+persistence
+'C:/Users/liamj/GitRepos/prj2-2024-18/implementation/Persistence/src/main/java/module-info.java'
+C:\Users\liamj\GitRepos\prj2-2024-18\implementation\Persistence\target\apidocs\allclasses-index.html = 1716977027044
+C:\Users\liamj\GitRepos\prj2-2024-18\implementation\Persistence\target\apidocs\allpackages-index.html = 1716977027047
+C:\Users\liamj\GitRepos\prj2-2024-18\implementation\Persistence\target\apidocs\copy.svg = 1716977027076
+C:\Users\liamj\GitRepos\prj2-2024-18\implementation\Persistence\target\apidocs\element-list = 1716977026977
+C:\Users\liamj\GitRepos\prj2-2024-18\implementation\Persistence\target\apidocs\help-doc.html = 1716977027070
+C:\Users\liamj\GitRepos\prj2-2024-18\implementation\Persistence\target\apidocs\index-all.html = 1716977027061
+C:\Users\liamj\GitRepos\prj2-2024-18\implementation\Persistence\target\apidocs\index.html = 1716977027066
+C:\Users\liamj\GitRepos\prj2-2024-18\implementation\Persistence\target\apidocs\link.svg = 1716977027077
+C:\Users\liamj\GitRepos\prj2-2024-18\implementation\Persistence\target\apidocs\member-search-index.js = 1716977027051
+C:\Users\liamj\GitRepos\prj2-2024-18\implementation\Persistence\target\apidocs\module-search-index.js = 1716977027048
+C:\Users\liamj\GitRepos\prj2-2024-18\implementation\Persistence\target\apidocs\overview-tree.html = 1716977027034
+C:\Users\liamj\GitRepos\prj2-2024-18\implementation\Persistence\target\apidocs\package-search-index.js = 1716977027049
+C:\Users\liamj\GitRepos\prj2-2024-18\implementation\Persistence\target\apidocs\script.js = 1716977027074
+C:\Users\liamj\GitRepos\prj2-2024-18\implementation\Persistence\target\apidocs\search-page.js = 1716977027081
+C:\Users\liamj\GitRepos\prj2-2024-18\implementation\Persistence\target\apidocs\search.html = 1716977027063
+C:\Users\liamj\GitRepos\prj2-2024-18\implementation\Persistence\target\apidocs\search.js = 1716977027080
+C:\Users\liamj\GitRepos\prj2-2024-18\implementation\Persistence\target\apidocs\stylesheet.css = 1716977027073
+C:\Users\liamj\GitRepos\prj2-2024-18\implementation\Persistence\target\apidocs\tag-search-index.js = 1716977027052
+C:\Users\liamj\GitRepos\prj2-2024-18\implementation\Persistence\target\apidocs\type-search-index.js = 1716977027050

@@ -1,0 +1,15 @@
+gui\GUIFlight.class
+gui\GUICustomer.class
+gui\SearchFlightController.class
+gui\SceneManager.class
+gui\GUIPassenger.class
+module-info.class
+gui\DiscountController.class
+gui\CustomerController.class
+gui\SecondaryController.class
+gui\LoginController.class
+gui\Seat.class
+gui\ErrorController.class
+gui\SearchPassengerController.class
+gui\GUIApp.class
+gui\RegisterPassengerController.class

@@ -1,0 +1,6 @@
+-------------------------------------------------------------------------------
+Test set: businesslogic.BusinessTests
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.068 s -- in businesslogic.BusinessTests
+businesslogic.BusinessTests.testDateInThePast -- Time elapsed: 0.046 s
+businesslogic.BusinessTests.testDateInTheFuture -- Time elapsed: 0 s

@@ -1,0 +1,1 @@
+typeSearchIndex = [{"p":"datarecords","l":"Account"},{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"datarecords","l":"Customer"},{"p":"datarecords","l":"CustomerData"},{"p":"datarecords","l":"Flight"}];updateSearchResults();

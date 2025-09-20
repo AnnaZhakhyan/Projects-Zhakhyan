@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=3 uid="uid://bg6bm4oc3b8yx"]
+
+[ext_resource type="Texture2D" uid="uid://c3tna0sptidni" path="res://art/items/longsword.webp" id="1_4b4ye"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_883mq"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+corner_radius_top_left = 12
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[node name="BasicItem" type="PanelContainer"]
+custom_minimum_size = Vector2(100, 100)
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_883mq")
+
+[node name="Icon" type="TextureRect" parent="."]
+show_behind_parent = true
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("1_4b4ye")
+expand_mode = 1

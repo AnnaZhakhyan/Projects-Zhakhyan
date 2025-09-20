@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Level" load_steps=3 format=3 uid="uid://ci5uiwvybqphd"]
+
+[ext_resource type="Script" uid="uid://d072ca4o75w6t" path="res://stages/nhc/nhc_0_00.gd" id="1_2y013"]
+[ext_resource type="Script" uid="uid://vek52wj5fq2a" path="res://resources/RES_Level.gd" id="2_ma13p"]
+
+[resource]
+script = ExtResource("2_ma13p")
+num = "1.3"
+name = "AW MAN!!!!"
+desc = "Evil people are storming the gates of The New Horzion City AGAIN?!>!>! Someone's gotta stop them! UGHH!!"
+difficulty = 2
+stamina_cost = 0
+levelSetup = ExtResource("1_2y013")
+metadata/_custom_type_script = "uid://vek52wj5fq2a"

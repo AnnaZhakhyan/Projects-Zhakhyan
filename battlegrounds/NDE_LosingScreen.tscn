@@ -1,0 +1,556 @@
+[gd_scene load_steps=9 format=3 uid="uid://bpe3a6livt4a1"]
+
+[ext_resource type="FontFile" uid="uid://45iis2l2m2sl" path="res://art/fonts/Crang.ttf" id="1_b0sdw"]
+[ext_resource type="Script" uid="uid://cnddyr4qrhae4" path="res://scenes/battlegrounds/Scripts/nde_losing_screen.gd" id="1_xp1mo"]
+
+[sub_resource type="Animation" id="Animation_olgbm"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible_characters")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../background:color:r")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0.0784314, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../background:color:g")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0.0784314, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../background:color:b")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0.0784314, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/4/type = "bezier"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../background:color:a")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/5/type = "bezier"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("../../AnimationPlayer2/RestartButton:position:x")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(-398, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/6/type = "bezier"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("../../AnimationPlayer2/RestartButton:position:y")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1103, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/7/type = "bezier"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("../../AnimationPlayer2/BackButton:position:x")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1139, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/8/type = "bezier"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("../../AnimationPlayer2/BackButton:position:y")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1060, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/9/type = "bezier"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("../GameOverLabel:position:x")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(838, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/10/type = "bezier"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("../GameOverLabel:position:y")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(539, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/11/type = "bezier"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("../Polygon2D:position:x")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(-328, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/12/type = "bezier"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("../Polygon2D:position:y")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(708, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/13/type = "bezier"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("../../AnimationPlayer2/RestartButton:rotation")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0.371944, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/14/type = "bezier"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("../../AnimationPlayer2/BackButton:rotation")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(3.14159, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_uxcf4"]
+resource_name = "losing"
+length = 2.34
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible_characters")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 9, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0.6, 1.36667)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../background:color:r")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0.0784314, -0.25, 0, 0.25, 0, 0.0784314, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.833333)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../background:color:g")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0.0784314, -0.25, 0, 0.25, 0, 0.0784314, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.833333)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../background:color:b")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0.0784314, -0.25, 0, 0.25, 0, 0.0784314, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.833333)
+}
+tracks/4/type = "bezier"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../background:color:a")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0.67451, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.833333)
+}
+tracks/5/type = "bezier"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("../../AnimationPlayer2/RestartButton:position:x")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(-398, -0.25, 0, 0.25, 0, 137, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.7)
+}
+tracks/6/type = "bezier"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("../../AnimationPlayer2/RestartButton:position:y")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1103, -0.25, 0, 0.25, 0, 1099, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.7)
+}
+tracks/7/type = "bezier"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("../../AnimationPlayer2/BackButton:position:x")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1139, -0.25, 0, 0.25, 0, 496, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.7)
+}
+tracks/8/type = "bezier"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("../../AnimationPlayer2/BackButton:position:y")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1060, -0.25, 0, 0.25, 0, 1068, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.7)
+}
+tracks/9/type = "bezier"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("../GameOverLabel:position:x")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(838, -0.25, 0, 0.25, 0, -65, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.666667)
+}
+tracks/10/type = "bezier"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("../GameOverLabel:position:y")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(539, -0.25, 0, 0.25, 0, 776, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.666667)
+}
+tracks/11/type = "bezier"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("../Polygon2D:position:x")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(-328, -0.25, 0, 0.25, 0, 329, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.533333)
+}
+tracks/12/type = "bezier"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("../Polygon2D:position:y")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(708, -0.25, 0, 0.25, 0, 692, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.533333)
+}
+tracks/13/type = "bezier"
+tracks/13/imported = false
+tracks/13/enabled = false
+tracks/13/path = NodePath("../../AnimationPlayer2/RestartButton:rotation")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0.122082, -0.25, 0, 0.25, 0, 0.447138, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(1.6, 2.33333)
+}
+tracks/14/type = "bezier"
+tracks/14/imported = false
+tracks/14/enabled = false
+tracks/14/path = NodePath("../../AnimationPlayer2/BackButton:rotation")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0),
+"points": PackedFloat32Array(3.14159, -0.25, 0, 0.25, 0, 3.4617, -0.25, 0, 0.25, 0, 3.61711, -0.25, 0, 0.25, 0, 3.31984, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.7, 1.6, 2.33333)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_mquru"]
+_data = {
+&"RESET": SubResource("Animation_olgbm"),
+&"losing": SubResource("Animation_uxcf4")
+}
+
+[sub_resource type="Animation" id="Animation_8yaob"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimationPlayer2/RestartButton:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0.447138, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimationPlayer2/BackButton:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(3.31984, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_14pxm"]
+resource_name = "jiggle"
+length = 8.0
+loop_mode = 1
+step = 0.1
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimationPlayer2/RestartButton:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(0.447138, -0.25, 0, 0.25, 0, 0.140448, -0.25, 0, 0.25, 0, 0.447, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 2, 4)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimationPlayer2/BackButton:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(3.213, -0.25, 0, 0.25, 0, 3.54598, -0.25, 0, 0.25, 0, 3.21288, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 2, 4)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_xvgmh"]
+_data = {
+&"RESET": SubResource("Animation_8yaob"),
+&"jiggle": SubResource("Animation_14pxm")
+}
+
+[node name="NdeLosingScreen" type="Control"]
+clip_contents = true
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_xp1mo")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("LosingLabel")
+libraries = {
+&"": SubResource("AnimationLibrary_mquru")
+}
+autoplay = "losing"
+
+[node name="GameOverLabel" type="ColorRect" parent="AnimationPlayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 485.5
+offset_top = -211.0
+offset_right = 1421.5
+offset_bottom = -95.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = -0.242464
+color = Color(0, 0, 0, 0.466667)
+
+[node name="background" type="ColorRect" parent="AnimationPlayer"]
+clip_contents = true
+offset_right = 707.0
+offset_bottom = 1502.0
+color = Color(0.0784314, 0.0784314, 0.0784314, 0)
+metadata/_edit_lock_ = true
+
+[node name="Polygon2D" type="Polygon2D" parent="AnimationPlayer"]
+position = Vector2(-328, 708)
+rotation = 3.61151
+scale = Vector2(2.64331, 3.07294)
+color = Color(0.964706, 0.278431, 0.101961, 1)
+offset = Vector2(-446, -99)
+polygon = PackedVector2Array(353, 68, 537.502, 67.7538, 424.55, 141.295)
+
+[node name="Polygon2D2" type="Polygon2D" parent="AnimationPlayer/Polygon2D"]
+color = Color(0.752941, 0.0627451, 0, 1)
+offset = Vector2(-446, -99)
+polygon = PackedVector2Array(365.497, 73.6869, 504.321, 70.9767, 429.296, 128.961)
+
+[node name="LosingLabel" type="RichTextLabel" parent="AnimationPlayer"]
+offset_left = 142.0
+offset_top = 742.0
+offset_right = 805.0
+offset_bottom = 834.0
+rotation = -0.216121
+theme_override_fonts/normal_font = ExtResource("1_b0sdw")
+theme_override_font_sizes/normal_font_size = 75
+bbcode_enabled = true
+text = "[shake rate 40.0 level=2
+connected=1]game over[/shake]"
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="AnimationPlayer2" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_xvgmh")
+}
+
+[node name="RestartButton" type="Button" parent="AnimationPlayer2"]
+self_modulate = Color(1, 1, 1, 0)
+offset_left = -398.0
+offset_top = 1103.0
+offset_right = -271.0
+offset_bottom = 1237.0
+rotation = 0.447138
+pivot_offset = Vector2(60.2473, 69.8101)
+
+[node name="P1" type="Polygon2D" parent="AnimationPlayer2/RestartButton"]
+position = Vector2(-178, -160)
+scale = Vector2(3.14754, 3.14754)
+color = Color(0.968627, 0.27451, 0.101961, 1)
+polygon = PackedVector2Array(42.2042, 100.851, 69.1772, 43.1498, 126.839, 79.0695)
+
+[node name="P2" type="Polygon2D" parent="AnimationPlayer2/RestartButton/P1"]
+position = Vector2(23.1771, 18.7761)
+scale = Vector2(0.708466, 0.708466)
+color = Color(0.752941, 0.0627451, 0, 1)
+polygon = PackedVector2Array(34.5203, 111.456, 65.6161, 41.095, 129.573, 80.0612)
+
+[node name="RestartLabel" type="Label" parent="AnimationPlayer2/RestartButton/P1/P2"]
+anchors_preset = -1
+anchor_left = 0.415
+anchor_top = 0.383
+anchor_right = 0.603
+anchor_bottom = 0.667
+offset_left = 6.20851
+offset_top = 83.8515
+offset_right = 274.208
+offset_bottom = 134.852
+rotation = -0.340431
+scale = Vector2(0.54, 0.54)
+theme_override_fonts/font = ExtResource("1_b0sdw")
+theme_override_font_sizes/font_size = 50
+text = "restart"
+
+[node name="BackButton" type="Button" parent="AnimationPlayer2"]
+self_modulate = Color(1, 1, 1, 0)
+offset_left = 1139.0
+offset_top = 1060.0
+offset_right = 1266.0
+offset_bottom = 1194.0
+rotation = 3.31984
+pivot_offset = Vector2(60.2473, 69.8101)
+
+[node name="P1" type="Polygon2D" parent="AnimationPlayer2/BackButton"]
+position = Vector2(-178, -160)
+rotation = -0.053305
+scale = Vector2(3.14754, 3.14754)
+color = Color(0.968627, 0.27451, 0.101961, 1)
+polygon = PackedVector2Array(42.2042, 100.851, 69.1772, 43.1498, 126.839, 79.0695)
+
+[node name="P2" type="Polygon2D" parent="AnimationPlayer2/BackButton/P1"]
+position = Vector2(23.1771, 18.7761)
+scale = Vector2(0.708466, 0.708466)
+color = Color(0.752941, 0.0627451, 0, 1)
+polygon = PackedVector2Array(34.5203, 111.456, 65.6161, 41.095, 129.573, 80.0612)
+
+[node name="BackLabel" type="Label" parent="AnimationPlayer2/BackButton/P1/P2"]
+anchors_preset = -1
+anchor_left = 0.415
+anchor_top = 0.383
+anchor_right = 0.603
+anchor_bottom = 0.667
+offset_left = 137.917
+offset_top = 76.9155
+offset_right = 405.917
+offset_bottom = 127.916
+rotation = -3.33358
+scale = Vector2(0.54, 0.54)
+theme_override_fonts/font = ExtResource("1_b0sdw")
+theme_override_font_sizes/font_size = 50
+text = "go back"
+
+[connection signal="pressed" from="AnimationPlayer2/RestartButton" to="." method="_on_restart_button_pressed"]
+[connection signal="pressed" from="AnimationPlayer2/BackButton" to="." method="_on_back_button_pressed"]
+[connection signal="mouse_entered" from="AnimationPlayer2/BackButton/P1/P2/BackLabel" to="." method="_on_back_label_mouse_entered"]

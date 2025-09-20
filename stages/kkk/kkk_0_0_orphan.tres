@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Level" load_steps=3 format=3 uid="uid://dnay6rvlnkwdd"]
+
+[ext_resource type="Script" uid="uid://pfkgecyvpxgv" path="res://stages/kkk/kkk_0_0_orphan_FIGHT.gd" id="1_rx6ek"]
+[ext_resource type="Script" uid="uid://vek52wj5fq2a" path="res://resources/RES_Level.gd" id="2_chimk"]
+
+[resource]
+script = ExtResource("2_chimk")
+num = "1.1"
+name = "Killing Orhpans"
+desc = "THOSE STUPID ORPHANS. They cant even afford to have parents. What value do they add to the society. I say we get rid of them once and for all. Heil!"
+difficulty = 0
+stamina_cost = 69
+levelSetup = ExtResource("1_rx6ek")
+metadata/_custom_type_script = "uid://vek52wj5fq2a"

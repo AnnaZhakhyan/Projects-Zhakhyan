@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Level" load_steps=4 format=3 uid="uid://dwmaesqqhgueq"]
+
+[ext_resource type="Script" uid="uid://brv5rwg4s86li" path="res://DialExample3.gd" id="1_dxium"]
+[ext_resource type="Script" uid="uid://dse2k5s7o70xu" path="res://stages/kkk/kkk_2_0_kozi_FIGHT.gd" id="2_ypuu5"]
+[ext_resource type="Script" uid="uid://vek52wj5fq2a" path="res://resources/RES_Level.gd" id="3_mwy4v"]
+
+[resource]
+script = ExtResource("3_mwy4v")
+num = "3.1"
+name = "Throne Room"
+desc = "Throne Room
+"
+difficulty = 2
+stamina_cost = 999
+dialogue = ExtResource("1_dxium")
+levelSetup = ExtResource("2_ypuu5")
+metadata/_custom_type_script = "uid://vek52wj5fq2a"

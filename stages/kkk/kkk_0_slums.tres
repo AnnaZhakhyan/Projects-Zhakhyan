@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="MapStage" load_steps=4 format=3 uid="uid://posun70w4int"]
+
+[ext_resource type="Script" uid="uid://vek52wj5fq2a" path="res://resources/RES_Level.gd" id="1_s1jxp"]
+[ext_resource type="Resource" uid="uid://dnay6rvlnkwdd" path="res://stages/kkk/kkk_0_0_orphan.tres" id="2_20mkk"]
+[ext_resource type="Script" uid="uid://cq5rchlxfwvii" path="res://resources/RES_Stage.gd" id="5_081dd"]
+
+[resource]
+script = ExtResource("5_081dd")
+stageNum = 1
+stageName = "The Lower Slums"
+levels = Array[ExtResource("1_s1jxp")]([ExtResource("2_20mkk")])
+metadata/_custom_type_script = "uid://cq5rchlxfwvii"

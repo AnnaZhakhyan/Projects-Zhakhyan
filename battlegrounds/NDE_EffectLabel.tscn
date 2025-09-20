@@ -1,0 +1,107 @@
+[gd_scene load_steps=9 format=3 uid="uid://bcql3qanv45ft"]
+
+[ext_resource type="Texture2D" uid="uid://cc21xkrc4cl27" path="res://art/ui/effect.png" id="1_nj2qe"]
+[ext_resource type="Script" uid="uid://77q7cay5b3w0" path="res://scenes/battlegrounds/Scripts/SCR_EffectLabel.gd" id="1_sbybu"]
+[ext_resource type="FontFile" uid="uid://45iis2l2m2sl" path="res://art/fonts/Crang.ttf" id="2_tsq40"]
+[ext_resource type="Texture2D" uid="uid://bqx3aa143ff7s" path="res://art/ui/effect2.png" id="3_fawmg"]
+[ext_resource type="Texture2D" uid="uid://bsreoylddnldp" path="res://art/ui/Arrow.png" id="4_6vyn6"]
+[ext_resource type="FontFile" uid="uid://djkb5dey1pqn3" path="res://art/fonts/UpheavalPro.ttf" id="5_p112x"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6vyn6"]
+texture = ExtResource("1_nj2qe")
+texture_margin_left = 12.0
+texture_margin_top = 12.0
+texture_margin_right = 12.0
+texture_margin_bottom = 12.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_p112x"]
+texture = ExtResource("3_fawmg")
+texture_margin_left = 3.0
+texture_margin_top = 12.0
+texture_margin_right = 9.0
+texture_margin_bottom = 12.0
+
+[node name="Effect" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_sbybu")
+
+[node name="HBOX" type="HBoxContainer" parent="."]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.323
+anchor_right = 0.323
+offset_left = -500.361
+offset_right = -0.360962
+offset_bottom = 55.0
+pivot_offset = Vector2(500, 0)
+theme_override_constants/separation = 0
+alignment = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="HBOX"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_6vyn6")
+
+[node name="MarginContainer" type="MarginContainer" parent="HBOX/PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 6
+theme_override_constants/margin_top = 3
+theme_override_constants/margin_right = 6
+theme_override_constants/margin_bottom = 2
+
+[node name="EffectName" type="Label" parent="HBOX/PanelContainer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("2_tsq40")
+theme_override_font_sizes/font_size = 25
+text = "ATK"
+horizontal_alignment = 2
+
+[node name="PanelContainer2" type="PanelContainer" parent="HBOX"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_p112x")
+
+[node name="MarginContainer" type="MarginContainer" parent="HBOX/PanelContainer2"]
+layout_mode = 2
+theme_override_constants/margin_left = 6
+theme_override_constants/margin_top = 3
+theme_override_constants/margin_right = 6
+theme_override_constants/margin_bottom = 2
+
+[node name="EffectValue" type="Label" parent="HBOX/PanelContainer2/MarginContainer"]
+layout_mode = 2
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("2_tsq40")
+theme_override_font_sizes/font_size = 25
+text = "20%"
+
+[node name="Arrow" type="TextureRect" parent="."]
+modulate = Color(0.6175, 1, 0.55, 1)
+texture_filter = 1
+layout_mode = 0
+offset_left = -31.8892
+offset_top = -20.9661
+offset_right = 25.1108
+offset_bottom = 36.0339
+rotation = -0.261799
+pivot_offset = Vector2(30.7692, 28.5)
+texture = ExtResource("4_6vyn6")
+expand_mode = 1
+
+[node name="TurnCounter" type="Label" parent="."]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = -229.0
+offset_top = 49.0
+offset_right = 53.0
+offset_bottom = 67.0
+grow_horizontal = 2
+scale = Vector2(0.78, 0.78)
+theme_override_constants/outline_size = 20
+theme_override_fonts/font = ExtResource("5_p112x")
+theme_override_font_sizes/font_size = 20
+text = "5 Turns Left"
+horizontal_alignment = 2

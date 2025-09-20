@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="MapStage" load_steps=6 format=3 uid="uid://cjfja3scm7ylr"]
+
+[ext_resource type="Script" uid="uid://vek52wj5fq2a" path="res://resources/RES_Level.gd" id="1_nb031"]
+[ext_resource type="Script" uid="uid://cq5rchlxfwvii" path="res://resources/RES_Stage.gd" id="1_tupka"]
+[ext_resource type="Resource" uid="uid://bshn5176njyrq" path="res://stages/nhc/nhc_0_00.tres" id="2_6kpfe"]
+[ext_resource type="Resource" uid="uid://dtwwt48ik5yci" path="res://stages/nhc/nhc_0_01.tres" id="3_6tbns"]
+[ext_resource type="Resource" uid="uid://ci5uiwvybqphd" path="res://stages/nhc/nhc_0_02.tres" id="4_kpxr7"]
+
+[resource]
+script = ExtResource("1_tupka")
+stageNum = 1
+stageName = "Front Gates"
+levels = Array[ExtResource("1_nb031")]([ExtResource("2_6kpfe"), ExtResource("3_6tbns"), ExtResource("4_kpxr7")])
+metadata/_custom_type_script = "uid://cq5rchlxfwvii"

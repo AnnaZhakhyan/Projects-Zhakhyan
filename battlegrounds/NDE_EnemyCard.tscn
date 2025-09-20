@@ -1,0 +1,423 @@
+[gd_scene load_steps=10 format=3 uid="uid://jc7ed72scexf"]
+
+[ext_resource type="Texture2D" uid="uid://brtxaqekx8auu" path="res://art/cards/AC_INT.png" id="1_v73uk"]
+[ext_resource type="Script" uid="uid://ceqbeg6s8psco" path="res://scenes/battlegrounds/Scripts/SCR_EnemyCard.gd" id="2_er8mg"]
+[ext_resource type="FontFile" uid="uid://djkb5dey1pqn3" path="res://art/fonts/UpheavalPro.ttf" id="3_2rq5e"]
+[ext_resource type="FontFile" uid="uid://45iis2l2m2sl" path="res://art/fonts/Crang.ttf" id="4_o7veh"]
+
+[sub_resource type="Animation" id="Animation_46gyl"]
+resource_name = "FLIP"
+length = 0.5
+step = 0.1
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(1.35, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 1.35, -0.25, 0.2, 0.25, 0),
+"times": PackedFloat32Array(0, 0.2, 0.5)
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CARD_BACK:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+
+[sub_resource type="Animation" id="Animation_dyepw"]
+resource_name = "FLIP_BACK"
+length = 0.5
+step = 0.1
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(1.35, -0.25, 0.2, 0.25, 0, 0, -0.25, 0, 0.25, 0, 1.35, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.2, 0.5)
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CARD_BACK:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="Animation" id="Animation_4ejpn"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(-21, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(-44, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:scale:x")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0.915, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:scale:y")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0.915, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("CARD_BACK:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_5i1de"]
+resource_name = "SPAWN"
+length = 0.8
+step = 0.2
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(-250, -0.25, 0, 0.25, 0, -250, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.4)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(-1610, -0.25, 0, 0.25, 0, -345, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.4)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:scale:x")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(0.5, -0.25, 0, 0.25, 0, 0.5, -0.25, 0, 0.25, 0.2, 0.915, -0.25, 0.2, 0.25, 0),
+"times": PackedFloat32Array(0, 0.4, 0.8)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:scale:y")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(0.5, -0.25, 0, 0.25, 0, 0.5, -0.25, 0, 0.25, 0.2, 0.915, -0.25, 0.2, 0.25, 0),
+"times": PackedFloat32Array(0, 0.4, 0.8)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_6r3qx"]
+_data = {
+&"FLIP": SubResource("Animation_46gyl"),
+&"FLIP_BACK": SubResource("Animation_dyepw"),
+&"RESET": SubResource("Animation_4ejpn"),
+&"SPAWN": SubResource("Animation_5i1de")
+}
+
+[node name="CARD" type="TextureRect"]
+texture_filter = 1
+offset_left = -250.0
+offset_top = -345.0
+offset_right = 250.0
+offset_bottom = 345.0
+scale = Vector2(0.915, 0.915)
+pivot_offset = Vector2(250, 516.552)
+texture = ExtResource("1_v73uk")
+script = ExtResource("2_er8mg")
+
+[node name="MRG" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 93.0
+offset_right = 18.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 0
+theme_override_constants/margin_top = 55
+theme_override_constants/margin_right = 25
+theme_override_constants/margin_bottom = 46
+
+[node name="VBOX" type="VBoxContainer" parent="MRG"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_constants/separation = 59
+
+[node name="L_OWNER" type="Label" parent="MRG/VBOX"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.88396, 0.7056, 0.98, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/line_spacing = -22
+theme_override_constants/shadow_offset_x = 6
+theme_override_constants/shadow_offset_y = 6
+theme_override_constants/outline_size = 20
+theme_override_constants/shadow_outline_size = 9
+theme_override_fonts/font = ExtResource("3_2rq5e")
+theme_override_font_sizes/font_size = 41
+text = "VOX"
+horizontal_alignment = 1
+
+[node name="L_NAME" type="Label" parent="MRG/VBOX"]
+custom_minimum_size = Vector2(355, 0)
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/line_spacing = 13
+theme_override_constants/shadow_offset_x = 15
+theme_override_constants/shadow_offset_y = 15
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("4_o7veh")
+theme_override_font_sizes/font_size = 71
+text = "MAN BE DAMNED"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="VBOX" type="VBoxContainer" parent="MRG/VBOX"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 60
+alignment = 2
+
+[node name="L_POWER" type="Label" parent="MRG/VBOX/VBOX"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/line_spacing = 13
+theme_override_constants/shadow_offset_x = 15
+theme_override_constants/shadow_offset_y = 15
+theme_override_constants/outline_size = 25
+theme_override_fonts/font = ExtResource("4_o7veh")
+theme_override_font_sizes/font_size = 136
+text = "2"
+horizontal_alignment = 1
+
+[node name="L_TYPE" type="Label" parent="MRG/VBOX/VBOX"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.88396, 0.7056, 0.98, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/line_spacing = -22
+theme_override_constants/shadow_offset_x = 6
+theme_override_constants/shadow_offset_y = 6
+theme_override_constants/outline_size = 20
+theme_override_constants/shadow_outline_size = 9
+theme_override_fonts/font = ExtResource("3_2rq5e")
+theme_override_font_sizes/font_size = 41
+text = "SPECIAL"
+horizontal_alignment = 1
+
+[node name="L_SIDE" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 17.0
+offset_top = 345.0
+offset_right = -188.0
+offset_bottom = -293.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = -1.57079
+theme_override_colors/font_color = Color(0.49952, 0.3024, 0.84, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/line_spacing = -22
+theme_override_constants/shadow_offset_x = 6
+theme_override_constants/shadow_offset_y = 6
+theme_override_constants/outline_size = 20
+theme_override_constants/shadow_outline_size = 9
+theme_override_fonts/font = ExtResource("3_2rq5e")
+theme_override_font_sizes/font_size = 41
+text = "Soul Sink"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="AP" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_6r3qx")
+}
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.5
+one_shot = true
+
+[node name="CARD_BACK" type="TextureRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_v73uk")
+flip_h = true
+
+[node name="MRG" type="MarginContainer" parent="CARD_BACK"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -75.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 55
+theme_override_constants/margin_right = 0
+theme_override_constants/margin_bottom = 46
+
+[node name="VBOX" type="VBoxContainer" parent="CARD_BACK/MRG"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_constants/separation = 24
+
+[node name="L_OWNER" type="Label" parent="CARD_BACK/MRG/VBOX"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.88396, 0.7056, 0.98, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/line_spacing = -22
+theme_override_constants/shadow_offset_x = 6
+theme_override_constants/shadow_offset_y = 6
+theme_override_constants/outline_size = 20
+theme_override_constants/shadow_outline_size = 9
+theme_override_fonts/font = ExtResource("3_2rq5e")
+theme_override_font_sizes/font_size = 41
+text = "VOX"
+horizontal_alignment = 1
+
+[node name="L_NAME" type="Label" parent="CARD_BACK/MRG/VBOX"]
+custom_minimum_size = Vector2(355, 60)
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/line_spacing = 13
+theme_override_constants/shadow_offset_x = 8
+theme_override_constants/shadow_offset_y = 8
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("4_o7veh")
+theme_override_font_sizes/font_size = 49
+text = "soul sink"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="L_DESC" type="Label" parent="CARD_BACK/MRG/VBOX"]
+custom_minimum_size = Vector2(355, 215)
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0.88396, 0.7056, 0.98, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/line_spacing = 20
+theme_override_constants/shadow_offset_x = 5
+theme_override_constants/shadow_offset_y = 5
+theme_override_constants/outline_size = 10
+theme_override_constants/shadow_outline_size = 9
+theme_override_fonts/font = ExtResource("3_2rq5e")
+theme_override_font_sizes/font_size = 37
+text = "Lose HP% equal to twice the power of this ability. Power [+1]."
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="VBOX" type="VBoxContainer" parent="CARD_BACK/MRG/VBOX"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 60
+alignment = 2
+
+[node name="L_POWER" type="Label" parent="CARD_BACK/MRG/VBOX/VBOX"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/line_spacing = 13
+theme_override_constants/shadow_offset_x = 11
+theme_override_constants/shadow_offset_y = 11
+theme_override_constants/outline_size = 25
+theme_override_fonts/font = ExtResource("4_o7veh")
+theme_override_font_sizes/font_size = 96
+text = "2"
+horizontal_alignment = 1
+
+[node name="L_TYPE" type="Label" parent="CARD_BACK/MRG/VBOX/VBOX"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.88396, 0.7056, 0.98, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/line_spacing = -22
+theme_override_constants/shadow_offset_x = 6
+theme_override_constants/shadow_offset_y = 6
+theme_override_constants/outline_size = 20
+theme_override_constants/shadow_outline_size = 9
+theme_override_fonts/font = ExtResource("3_2rq5e")
+theme_override_font_sizes/font_size = 41
+text = "SPECIAL"
+horizontal_alignment = 1
+
+[connection signal="gui_input" from="." to="." method="_on_gui_input"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -1,0 +1,189 @@
+[gd_scene load_steps=16 format=3 uid="uid://cypfiula7syo4"]
+
+[ext_resource type="Script" uid="uid://dqr1jsvwuifgw" path="res://scenes/battlegrounds/Scripts/SCR_CharaEnemy.gd" id="1_q5y0t"]
+[ext_resource type="Texture2D" uid="uid://70kqpmw4vcyg" path="res://chara/cmc/cmc_000_SHEET.png" id="1_wa3sf"]
+[ext_resource type="Texture2D" uid="uid://b1xdtn0yk60xc" path="res://art/ui/type_circle.png" id="2_2g0wr"]
+[ext_resource type="Texture2D" uid="uid://b8tbx15eudlr2" path="res://art/ui/enem_hb2.png" id="3_os336"]
+[ext_resource type="Texture2D" uid="uid://c2v36rc56ycxi" path="res://art/ui/enem_hb.png" id="4_ughpd"]
+[ext_resource type="Texture2D" uid="uid://nb3pk5te635y" path="res://art/ui/enem_hb1.png" id="5_2g0wr"]
+[ext_resource type="FontFile" uid="uid://45iis2l2m2sl" path="res://art/fonts/Crang.ttf" id="6_ughpd"]
+[ext_resource type="Texture2D" uid="uid://bsreoylddnldp" path="res://art/ui/Arrow.png" id="8_7kcdr"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vc78m"]
+atlas = ExtResource("1_wa3sf")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v6705"]
+atlas = ExtResource("1_wa3sf")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kg7vf"]
+atlas = ExtResource("1_wa3sf")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o85it"]
+atlas = ExtResource("1_wa3sf")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sx02j"]
+atlas = ExtResource("1_wa3sf")
+region = Rect2(256, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ufvt0"]
+atlas = ExtResource("1_wa3sf")
+region = Rect2(320, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mjhv5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vc78m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v6705")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kg7vf")
+}],
+"loop": true,
+"name": &"IDLE",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o85it")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sx02j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ufvt0")
+}],
+"loop": true,
+"name": &"SWING",
+"speed": 5.0
+}]
+
+[node name="Enemy" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_q5y0t")
+
+[node name="ColorCircle" type="TextureRect" parent="."]
+modulate = Color(0.739, 0.46, 1, 1)
+self_modulate = Color(1, 1, 1, 0.760784)
+texture_filter = 1
+layout_mode = 0
+offset_left = -68.0
+offset_top = 23.0
+offset_right = 61.0
+offset_bottom = 76.0
+texture = ExtResource("2_2g0wr")
+
+[node name="Sprite" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(-5, -17)
+scale = Vector2(2.5, 2.5)
+sprite_frames = SubResource("SpriteFrames_mjhv5")
+animation = &"IDLE"
+autoplay = "IDLE"
+
+[node name="Button" type="Button" parent="."]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -57.0
+offset_top = -87.0
+offset_right = 57.0
+offset_bottom = 63.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HPBar" type="TextureProgressBar" parent="."]
+modulate = Color(1, 1, 1, 0)
+texture_filter = 1
+layout_mode = 0
+offset_left = -19.0
+offset_top = -248.0
+offset_right = 22.0
+offset_bottom = -156.0
+scale = Vector2(1.5, 1.5)
+value = 100.0
+fill_mode = 3
+texture_under = ExtResource("3_os336")
+texture_over = ExtResource("4_ughpd")
+texture_progress = ExtResource("5_2g0wr")
+
+[node name="EnemyDamage" type="RichTextLabel" parent="."]
+visible = false
+z_index = 1
+texture_filter = 1
+clip_contents = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.467
+anchor_right = 0.467
+offset_left = -212.0
+offset_top = -95.0
+offset_right = 789.0
+offset_bottom = 82.0
+scale = Vector2(0.285, 0.285)
+size_flags_horizontal = 3
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 60
+theme_override_constants/shadow_offset_y = 1
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_outline_size = 9
+theme_override_fonts/normal_font = ExtResource("6_ughpd")
+theme_override_font_sizes/normal_font_size = 167
+bbcode_enabled = true
+text = "127"
+horizontal_alignment = 2
+vertical_alignment = 1
+justification_flags = 171
+
+[node name="CRIT" type="RichTextLabel" parent="EnemyDamage"]
+visible = false
+z_index = 1
+texture_filter = 1
+clip_contents = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.467
+anchor_right = 0.467
+offset_left = -599.434
+offset_top = -119.298
+offset_right = 228.566
+offset_bottom = -31.2982
+size_flags_horizontal = 3
+theme_override_colors/default_color = Color(1, 0.580392, 0.588235, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 25
+theme_override_constants/shadow_offset_y = 1
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_outline_size = 9
+theme_override_fonts/normal_font = ExtResource("6_ughpd")
+theme_override_font_sizes/normal_font_size = 62
+bbcode_enabled = true
+text = "[wave amp=50.0 freq=25.0 connected=1] CRITICAL !"
+horizontal_alignment = 2
+vertical_alignment = 1
+justification_flags = 171
+
+[node name="Arrow" type="TextureRect" parent="EnemyDamage"]
+visible = false
+modulate = Color(0.6175, 1, 0.55, 1)
+layout_mode = 0
+offset_left = 326.316
+offset_top = -84.2105
+offset_right = 536.316
+offset_bottom = 125.789
+rotation = -0.261799
+pivot_offset = Vector2(105, 105)
+texture = ExtResource("8_7kcdr")
+expand_mode = 1
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

@@ -1,0 +1,186 @@
+[gd_scene load_steps=6 format=3 uid="uid://cbqpswteclm4o"]
+
+[ext_resource type="Shader" uid="uid://bdfsab8yg8igr" path="res://scenes/main-menu/MainScene.gdshader" id="1_381k5"]
+[ext_resource type="Script" uid="uid://bk3wcsv7v3tf1" path="res://scenes/teamselect/SCR_TeamSelect.gd" id="1_c637f"]
+[ext_resource type="PackedScene" uid="uid://dbp7t3ckdf87q" path="res://scenes/teamselect/NDE_CharaSelect.tscn" id="2_fgnpd"]
+[ext_resource type="FontFile" uid="uid://45iis2l2m2sl" path="res://art/fonts/Crang.ttf" id="2_qcdx7"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_381k5"]
+shader = ExtResource("1_381k5")
+shader_parameter/battery = 1.0
+shader_parameter/anchor = -0.5
+shader_parameter/speed_scale = 0.5
+shader_parameter/fov = 0.321
+shader_parameter/background_color = Color(0, 0.1, 0.2, 1)
+shader_parameter/grid_color = Color(0.563572, 0.323233, 0.408232, 1)
+
+[node name="Teamselect" type="Control"]
+texture_filter = 1
+clip_contents = true
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_c637f")
+
+[node name="Background" type="ColorRect" parent="."]
+texture_filter = 2
+material = SubResource("ShaderMaterial_381k5")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.164706, 0, 0.305882, 1)
+
+[node name="HBOX" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -498.0
+offset_bottom = 100.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 24
+alignment = 1
+
+[node name="C1" type="Control" parent="HBOX"]
+custom_minimum_size = Vector2(200, 598)
+layout_mode = 2
+
+[node name="CharaSelect" parent="HBOX/C1" instance=ExtResource("2_fgnpd")]
+layout_mode = 2
+
+[node name="C2" type="Control" parent="HBOX"]
+custom_minimum_size = Vector2(200, 598)
+layout_mode = 2
+
+[node name="CharaSelect" parent="HBOX/C2" instance=ExtResource("2_fgnpd")]
+layout_mode = 2
+
+[node name="C3" type="Control" parent="HBOX"]
+custom_minimum_size = Vector2(200, 598)
+layout_mode = 2
+
+[node name="CharaSelect" parent="HBOX/C3" instance=ExtResource("2_fgnpd")]
+layout_mode = 2
+
+[node name="Bottom panel" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -1133.5
+offset_top = -123.0
+offset_right = 1080.5
+offset_bottom = 257.0
+grow_horizontal = 2
+grow_vertical = 0
+rotation = -0.13439
+color = Color(0, 0, 0, 0.929412)
+
+[node name="Start" type="Button" parent="Bottom panel"]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 1205.48
+offset_top = -41.8605
+offset_right = 1394.48
+offset_bottom = 64.1395
+rotation = 0.338989
+scale = Vector2(1.24515, 1.24515)
+pivot_offset = Vector2(93.7083, 49.4404)
+
+[node name="P1" type="Polygon2D" parent="Bottom panel/Start"]
+position = Vector2(-178, -160)
+scale = Vector2(3.14754, 3.14754)
+color = Color(0.74902, 0.0627451, 0, 1)
+polygon = PackedVector2Array(47.2285, 100.016, 76.5437, 43.3518, 126.263, 64.118)
+
+[node name="P2" type="Polygon2D" parent="Bottom panel/Start/P1"]
+position = Vector2(23.1771, 18.7761)
+scale = Vector2(0.708466, 0.708466)
+color = Color(0.964706, 0.27451, 0.101961, 1)
+polygon = PackedVector2Array(46.6331, 102.099, 78.2751, 43.8322, 132.43, 65.254)
+
+[node name="LibraryLabel" type="Label" parent="Bottom panel/Start/P1/P2"]
+anchors_preset = -1
+anchor_left = 0.415
+anchor_top = 0.383
+anchor_right = 0.603
+anchor_bottom = 0.667
+offset_left = -38.2598
+offset_top = 27.196
+offset_right = 213.741
+offset_bottom = 132.196
+rotation = -0.328899
+scale = Vector2(0.448518, 0.448518)
+pivot_offset = Vector2(122.626, 28.2274)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 6
+theme_override_constants/shadow_offset_y = 6
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("2_qcdx7")
+theme_override_font_sizes/font_size = 50
+text = "START"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Back" type="Button" parent="Bottom panel"]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 871.459
+offset_top = -19.4119
+offset_right = 1060.46
+offset_bottom = 86.5881
+rotation = -2.84479
+scale = Vector2(1.02636, 1.02636)
+pivot_offset = Vector2(93.7083, 49.4404)
+
+[node name="P1" type="Polygon2D" parent="Bottom panel/Back"]
+position = Vector2(-178, -160)
+scale = Vector2(3.14754, 3.14754)
+color = Color(0.74902, 0.0627451, 0, 1)
+polygon = PackedVector2Array(47.2285, 100.016, 76.5437, 43.3518, 126.263, 64.118)
+
+[node name="P2" type="Polygon2D" parent="Bottom panel/Back/P1"]
+position = Vector2(23.1771, 18.7761)
+scale = Vector2(0.708466, 0.708466)
+color = Color(0.964706, 0.27451, 0.101961, 1)
+polygon = PackedVector2Array(46.6331, 102.099, 78.2751, 43.8322, 132.43, 65.254)
+
+[node name="LibraryLabel" type="Label" parent="Bottom panel/Back/P1/P2"]
+anchors_preset = -1
+anchor_left = 0.415
+anchor_top = 0.383
+anchor_right = 0.603
+anchor_bottom = 0.667
+offset_left = -31.5886
+offset_top = 51.2302
+offset_right = 220.412
+offset_bottom = 156.23
+rotation = 2.84319
+scale = Vector2(0.483821, 0.483821)
+pivot_offset = Vector2(122.626, 28.2274)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 6
+theme_override_constants/shadow_offset_y = 6
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("2_qcdx7")
+theme_override_font_sizes/font_size = 50
+text = "BACK"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="Bottom panel/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="Bottom panel/Back" to="." method="_on_back_pressed"]

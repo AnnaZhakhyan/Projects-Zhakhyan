@@ -1,0 +1,162 @@
+[gd_scene load_steps=8 format=3 uid="uid://rtniubbhcf3q"]
+
+[ext_resource type="Texture2D" uid="uid://drrarm3q6yklh" path="res://art/ui/car1.png" id="1_d4mbi"]
+[ext_resource type="Script" uid="uid://biq1huvl7uoe" path="res://scenes/battlegrounds/Scripts/SCR_Car.gd" id="2_o2jxy"]
+[ext_resource type="Texture2D" uid="uid://c630q1k0d7vbu" path="res://art/ui/car2.png" id="3_1t571"]
+[ext_resource type="Texture2D" uid="uid://cqeccwsqfafgb" path="res://chara/cmc/cmc_001_SPLASH.png" id="3_2xhst"]
+
+[sub_resource type="Animation" id="Animation_88b3a"]
+resource_name = "FLASH"
+step = 0.1
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CLIP/FLASH:size:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(69, -0.25, 0.4, 0.25, 0, 69, -0.25, 0, 0.25, 0, 69, -0.25, 0.4, 0.25, 0),
+"times": PackedFloat32Array(0, 0.3, 0.6)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CLIP/FLASH:size:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(4, -0.25, 0.4, 0.25, 0, 42, -0.25, 0, 0.25, 0, 4, -0.25, 0.4, 0.25, 0),
+"times": PackedFloat32Array(0, 0.3, 0.6)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CLIP/FLASH:position:x")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(-4, -0.25, 0.4, 0.25, 0, -4, -0.25, 0.4, 0.25, 0),
+"times": PackedFloat32Array(0, 0.6)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CLIP/FLASH:position:y")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(56, -0.25, 0.4, 0.25, 0, -4, -0.25, 0.4, 0.25, 0),
+"times": PackedFloat32Array(0, 0.6)
+}
+
+[sub_resource type="Animation" id="Animation_g0v36"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CLIP/FLASH:size:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(69, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CLIP/FLASH:size:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(12, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CLIP/FLASH:position:x")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(-4, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CLIP/FLASH:position:y")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(48, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_gsmgy"]
+_data = {
+&"FLASH": SubResource("Animation_88b3a"),
+&"RESET": SubResource("Animation_g0v36")
+}
+
+[node name="CAR" type="TextureRect"]
+texture_filter = 1
+offset_right = 92.0
+offset_bottom = 60.0
+pivot_offset = Vector2(92.1049, 0)
+texture = ExtResource("1_d4mbi")
+script = ExtResource("2_o2jxy")
+
+[node name="CLIP" type="Control" parent="."]
+clip_contents = true
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -30.0
+offset_right = 30.0
+offset_bottom = 48.0
+grow_horizontal = 2
+
+[node name="ICON" type="TextureRect" parent="CLIP"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -94.0
+offset_top = -25.0
+offset_right = 182.0
+offset_bottom = 251.0
+grow_horizontal = 2
+scale = Vector2(0.703368, 0.703368)
+texture = ExtResource("3_2xhst")
+expand_mode = 1
+
+[node name="FLASH" type="ColorRect" parent="CLIP"]
+layout_mode = 0
+offset_left = -4.0
+offset_top = 48.0
+offset_right = 65.0
+offset_bottom = 60.0
+color = Color(1, 1, 1, 0.823529)
+
+[node name="BORDER" type="TextureRect" parent="."]
+texture_filter = 1
+layout_mode = 0
+offset_right = 92.0
+offset_bottom = 60.0
+pivot_offset = Vector2(92.1049, 0)
+texture = ExtResource("3_1t571")
+metadata/_edit_lock_ = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_gsmgy")
+}

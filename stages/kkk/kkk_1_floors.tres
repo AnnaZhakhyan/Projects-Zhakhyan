@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="MapStage" load_steps=6 format=3 uid="uid://fcubpogghxju"]
+
+[ext_resource type="Script" uid="uid://vek52wj5fq2a" path="res://resources/RES_Level.gd" id="1_x8wi2"]
+[ext_resource type="Resource" uid="uid://bshn5176njyrq" path="res://stages/nhc/nhc_0_00.tres" id="2_p8c7e"]
+[ext_resource type="Resource" uid="uid://dtwwt48ik5yci" path="res://stages/nhc/nhc_0_01.tres" id="3_x46bd"]
+[ext_resource type="Resource" uid="uid://ci5uiwvybqphd" path="res://stages/nhc/nhc_0_02.tres" id="4_c2ffd"]
+[ext_resource type="Script" uid="uid://cq5rchlxfwvii" path="res://resources/RES_Stage.gd" id="5_ytiwu"]
+
+[resource]
+script = ExtResource("5_ytiwu")
+stageNum = 2
+stageName = "The Middle Floors"
+levels = Array[ExtResource("1_x8wi2")]([ExtResource("2_p8c7e"), ExtResource("3_x46bd"), ExtResource("4_c2ffd")])
+metadata/_custom_type_script = "uid://cq5rchlxfwvii"

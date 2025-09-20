@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Level" load_steps=3 format=3 uid="uid://dtwwt48ik5yci"]
+
+[ext_resource type="Script" uid="uid://d072ca4o75w6t" path="res://stages/nhc/nhc_0_00.gd" id="1_h5aur"]
+[ext_resource type="Script" uid="uid://vek52wj5fq2a" path="res://resources/RES_Level.gd" id="2_juu7d"]
+
+[resource]
+script = ExtResource("2_juu7d")
+num = "1.2"
+name = "Comeback 2"
+desc = "Evil people are storming the gates of The New Horzion City AGAIN! Someone's gotta stop them! AGAIN!"
+difficulty = 1
+stamina_cost = 0
+levelSetup = ExtResource("1_h5aur")
+metadata/_custom_type_script = "uid://vek52wj5fq2a"

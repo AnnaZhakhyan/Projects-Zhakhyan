@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Level" load_steps=3 format=3 uid="uid://d26oq54ekvtyk"]
+
+[ext_resource type="Script" uid="uid://d072ca4o75w6t" path="res://stages/nhc/nhc_0_00.gd" id="1_1x2a0"]
+[ext_resource type="Script" uid="uid://vek52wj5fq2a" path="res://resources/RES_Level.gd" id="2_mshbp"]
+
+[resource]
+script = ExtResource("2_mshbp")
+num = ""
+name = "Baddies At The Gates"
+desc = "Evil people are storming the gates of The New Horzion City! Someone's gotta stop them!"
+difficulty = 0
+stamina_cost = 0
+levelSetup = ExtResource("1_1x2a0")
+metadata/_custom_type_script = "uid://vek52wj5fq2a"

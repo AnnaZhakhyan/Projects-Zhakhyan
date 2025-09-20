@@ -1,0 +1,1099 @@
+[gd_scene load_steps=17 format=3 uid="uid://dbp7t3ckdf87q"]
+
+[ext_resource type="Texture2D" uid="uid://cqeccwsqfafgb" path="res://chara/cmc/cmc_001_SPLASH.png" id="1_2cvbw"]
+[ext_resource type="Script" uid="uid://cjfk065evljgt" path="res://scenes/teamselect/SCR_CharaSelect.gd" id="1_hxl0o"]
+[ext_resource type="FontFile" uid="uid://djkb5dey1pqn3" path="res://art/fonts/UpheavalPro.ttf" id="2_hxl0o"]
+[ext_resource type="FontFile" uid="uid://qwtsv2nxc7s2" path="res://art/fonts/Pixellari.ttf" id="3_xvlgd"]
+[ext_resource type="Script" uid="uid://dj8aodsknwrqw" path="res://scenes/teamselect/SCR_CharaSelectDetail.gd" id="4_v1qm8"]
+[ext_resource type="Texture2D" uid="uid://bsje4n8tcdxef" path="res://art/items/empty.webp" id="6_55np6"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qcdx7"]
+bg_color = Color(0, 0, 0, 0.807843)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+shadow_color = Color(0, 0, 0, 1)
+shadow_offset = Vector2(20, 20)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_883mq"]
+bg_color = Color(0, 0, 0, 0)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+corner_radius_top_left = 12
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="Animation" id="Animation_d6lar"]
+resource_name = "CLOSE_LEFT"
+step = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:size")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(0.25, 1),
+"update": 0,
+"values": [Vector2(574, 598), Vector2(200, 598)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(0.25, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_5wlxx"]
+resource_name = "CLOSE_MIDDLE"
+step = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:size")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(0.25, 1),
+"update": 0,
+"values": [Vector2(574, 598), Vector2(200, 598)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(0.25, 1),
+"update": 0,
+"values": [Vector2(-187, 0), Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_6w64l"]
+resource_name = "CLOSE_RIGHT"
+step = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:size")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(0.25, 1),
+"update": 0,
+"values": [Vector2(574, 598), Vector2(200, 598)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(0.25, 1),
+"update": 0,
+"values": [Vector2(-374, 0), Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_xvlgd"]
+resource_name = "OPEN_LEFT"
+step = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:size")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(0.25, 1),
+"update": 0,
+"values": [Vector2(200, 598), Vector2(574, 598)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(0.25, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_hxl0o"]
+resource_name = "OPEN_MIDDLE"
+step = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:size")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(0.25, 1),
+"update": 0,
+"values": [Vector2(200, 598), Vector2(574, 598)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(0.25, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(-187, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_v1qm8"]
+resource_name = "OPEN_RIGHT"
+step = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:size")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(0.25, 1),
+"update": 0,
+"values": [Vector2(200, 598), Vector2(574, 598)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(0.25, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(-374, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_55np6"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:size")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(200, 598)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_xvlgd"]
+_data = {
+&"CLOSE_LEFT": SubResource("Animation_d6lar"),
+&"CLOSE_MIDDLE": SubResource("Animation_5wlxx"),
+&"CLOSE_RIGHT": SubResource("Animation_6w64l"),
+&"OPEN_LEFT": SubResource("Animation_xvlgd"),
+&"OPEN_MIDDLE": SubResource("Animation_hxl0o"),
+&"OPEN_RIGHT": SubResource("Animation_v1qm8"),
+&"RESET": SubResource("Animation_55np6")
+}
+
+[node name="CharaSelect" type="PanelContainer"]
+texture_filter = 1
+custom_minimum_size = Vector2(200, 598)
+offset_right = 200.0
+offset_bottom = 598.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_qcdx7")
+script = ExtResource("1_hxl0o")
+
+[node name="SPLASH" type="Control" parent="."]
+clip_contents = true
+layout_mode = 2
+mouse_filter = 2
+
+[node name="OFFSET" type="Control" parent="SPLASH"]
+layout_mode = 1
+anchor_left = 0.795
+anchor_right = 0.795
+offset_left = -195.1
+offset_top = 15.0
+offset_right = -15.1
+offset_bottom = 267.0
+grow_horizontal = 0
+scale = Vector2(2.42473, 2.42473)
+mouse_filter = 2
+
+[node name="TEX" type="TextureRect" parent="SPLASH/OFFSET"]
+layout_mode = 0
+offset_left = -64.0
+offset_top = -25.0
+offset_right = 192.0
+offset_bottom = 231.0
+mouse_filter = 2
+texture = ExtResource("1_2cvbw")
+
+[node name="DETAILS" type="Control" parent="."]
+clip_contents = true
+layout_mode = 2
+mouse_filter = 2
+
+[node name="STATS" type="VBoxContainer" parent="DETAILS"]
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -522.0
+offset_top = 240.0
+offset_right = -197.0
+offset_bottom = 212.0
+grow_horizontal = 0
+grow_vertical = 2
+scale = Vector2(0.600689, 0.600689)
+
+[node name="ATK_LABEL" type="Label" parent="DETAILS/STATS"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.8, 0.528, 0.528, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/line_spacing = -22
+theme_override_constants/shadow_offset_x = 6
+theme_override_constants/shadow_offset_y = 6
+theme_override_constants/outline_size = 20
+theme_override_constants/shadow_outline_size = 9
+theme_override_fonts/font = ExtResource("3_xvlgd")
+theme_override_font_sizes/font_size = 32
+text = "PHYSICAL ATTACK:"
+vertical_alignment = 1
+
+[node name="ATK_STAT" type="HBoxContainer" parent="DETAILS/STATS"]
+layout_mode = 2
+theme_override_constants/separation = 13
+
+[node name="BASE" type="Label" parent="DETAILS/STATS/ATK_STAT"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.8, 0.8, 0.8, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/line_spacing = -22
+theme_override_constants/shadow_offset_x = 6
+theme_override_constants/shadow_offset_y = 6
+theme_override_constants/outline_size = 20
+theme_override_constants/shadow_outline_size = 9
+theme_override_fonts/font = ExtResource("3_xvlgd")
+theme_override_font_sizes/font_size = 48
+text = "100"
+vertical_alignment = 1
+
+[node name="BONUS" type="Label" parent="DETAILS/STATS/ATK_STAT"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.577008, 0.577008, 0.577008, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/line_spacing = -22
+theme_override_constants/shadow_offset_x = 6
+theme_override_constants/shadow_offset_y = 6
+theme_override_constants/outline_size = 20
+theme_override_constants/shadow_outline_size = 9
+theme_override_fonts/font = ExtResource("3_xvlgd")
+theme_override_font_sizes/font_size = 48
+text = "(+10)"
+vertical_alignment = 1
+
+[node name="S_ATK_LABEL" type="Label" parent="DETAILS/STATS"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.8, 0.682133, 0.528, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/line_spacing = -22
+theme_override_constants/shadow_offset_x = 6
+theme_override_constants/shadow_offset_y = 6
+theme_override_constants/outline_size = 20
+theme_override_constants/shadow_outline_size = 9
+theme_override_fonts/font = ExtResource("3_xvlgd")
+theme_override_font_sizes/font_size = 32
+text = "SPECIAL ATTACK"
+vertical_alignment = 1
+
+[node name="S_ATK_STAT" type="HBoxContainer" parent="DETAILS/STATS"]
+layout_mode = 2
+theme_override_constants/separation = 13
+
+[node name="BASE" type="Label" parent="DETAILS/STATS/S_ATK_STAT"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.8, 0.8, 0.8, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/line_spacing = -22
+theme_override_constants/shadow_offset_x = 6
+theme_override_constants/shadow_offset_y = 6
+theme_override_constants/outline_size = 20
+theme_override_constants/shadow_outline_size = 9
+theme_override_fonts/font = ExtResource("3_xvlgd")
+theme_override_font_sizes/font_size = 48
+text = "100"
+vertical_alignment = 1
+
+[node name="BONUS" type="Label" parent="DETAILS/STATS/S_ATK_STAT"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.577008, 0.577008, 0.577008, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/line_spacing = -22
+theme_override_constants/shadow_offset_x = 6
+theme_override_constants/shadow_offset_y = 6
+theme_override_constants/outline_size = 20
+theme_override_constants/shadow_outline_size = 9
+theme_override_fonts/font = ExtResource("3_xvlgd")
+theme_override_font_sizes/font_size = 48
+text = "(+10)"
+vertical_alignment = 1
+
+[node name="DEF_LABEL" type="Label" parent="DETAILS/STATS"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.528, 0.5824, 0.8, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/line_spacing = -22
+theme_override_constants/shadow_offset_x = 6
+theme_override_constants/shadow_offset_y = 6
+theme_override_constants/outline_size = 20
+theme_override_constants/shadow_outline_size = 9
+theme_override_fonts/font = ExtResource("3_xvlgd")
+theme_override_font_sizes/font_size = 32
+text = "PHYSICAL DEFENSE"
+vertical_alignment = 1
+
+[node name="DEF_STAT" type="HBoxContainer" parent="DETAILS/STATS"]
+layout_mode = 2
+theme_override_constants/separation = 13
+
+[node name="BASE" type="Label" parent="DETAILS/STATS/DEF_STAT"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.8, 0.8, 0.8, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/line_spacing = -22
+theme_override_constants/shadow_offset_x = 6
+theme_override_constants/shadow_offset_y = 6
+theme_override_constants/outline_size = 20
+theme_override_constants/shadow_outline_size = 9
+theme_override_fonts/font = ExtResource("3_xvlgd")
+theme_override_font_sizes/font_size = 48
+text = "100"
+vertical_alignment = 1
+
+[node name="BONUS" type="Label" parent="DETAILS/STATS/DEF_STAT"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.577008, 0.577008, 0.577008, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/line_spacing = -22
+theme_override_constants/shadow_offset_x = 6
+theme_override_constants/shadow_offset_y = 6
+theme_override_constants/outline_size = 20
+theme_override_constants/shadow_outline_size = 9
+theme_override_fonts/font = ExtResource("3_xvlgd")
+theme_override_font_sizes/font_size = 48
+text = "(+10)"
+vertical_alignment = 1
+
+[node name="S_DEF_LABEL" type="Label" parent="DETAILS/STATS"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.528, 0.709333, 0.8, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/line_spacing = -22
+theme_override_constants/shadow_offset_x = 6
+theme_override_constants/shadow_offset_y = 6
+theme_override_constants/outline_size = 20
+theme_override_constants/shadow_outline_size = 9
+theme_override_fonts/font = ExtResource("3_xvlgd")
+theme_override_font_sizes/font_size = 32
+text = "SPECIAL DEFENSE"
+vertical_alignment = 1
+
+[node name="S_DEF_STAT" type="HBoxContainer" parent="DETAILS/STATS"]
+layout_mode = 2
+theme_override_constants/separation = 13
+
+[node name="BASE" type="Label" parent="DETAILS/STATS/S_DEF_STAT"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.8, 0.8, 0.8, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/line_spacing = -22
+theme_override_constants/shadow_offset_x = 6
+theme_override_constants/shadow_offset_y = 6
+theme_override_constants/outline_size = 20
+theme_override_constants/shadow_outline_size = 9
+theme_override_fonts/font = ExtResource("3_xvlgd")
+theme_override_font_sizes/font_size = 48
+text = "100"
+vertical_alignment = 1
+
+[node name="BONUS" type="Label" parent="DETAILS/STATS/S_DEF_STAT"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.577008, 0.577008, 0.577008, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/line_spacing = -22
+theme_override_constants/shadow_offset_x = 6
+theme_override_constants/shadow_offset_y = 6
+theme_override_constants/outline_size = 20
+theme_override_constants/shadow_outline_size = 9
+theme_override_fonts/font = ExtResource("3_xvlgd")
+theme_override_font_sizes/font_size = 48
+text = "(+10)"
+vertical_alignment = 1
+
+[node name="HP_LABEL" type="Label" parent="DETAILS/STATS"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.632267, 0.8, 0.528, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/line_spacing = -22
+theme_override_constants/shadow_offset_x = 6
+theme_override_constants/shadow_offset_y = 6
+theme_override_constants/outline_size = 20
+theme_override_constants/shadow_outline_size = 9
+theme_override_fonts/font = ExtResource("3_xvlgd")
+theme_override_font_sizes/font_size = 32
+text = "HEALTH POINTS"
+vertical_alignment = 1
+
+[node name="HP_STAT" type="HBoxContainer" parent="DETAILS/STATS"]
+layout_mode = 2
+theme_override_constants/separation = 13
+
+[node name="BASE" type="Label" parent="DETAILS/STATS/HP_STAT"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.8, 0.8, 0.8, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/line_spacing = -22
+theme_override_constants/shadow_offset_x = 6
+theme_override_constants/shadow_offset_y = 6
+theme_override_constants/outline_size = 20
+theme_override_constants/shadow_outline_size = 9
+theme_override_fonts/font = ExtResource("3_xvlgd")
+theme_override_font_sizes/font_size = 48
+text = "100"
+vertical_alignment = 1
+
+[node name="BONUS" type="Label" parent="DETAILS/STATS/HP_STAT"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.577008, 0.577008, 0.577008, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/line_spacing = -22
+theme_override_constants/shadow_offset_x = 6
+theme_override_constants/shadow_offset_y = 6
+theme_override_constants/outline_size = 20
+theme_override_constants/shadow_outline_size = 9
+theme_override_fonts/font = ExtResource("3_xvlgd")
+theme_override_font_sizes/font_size = 48
+text = "(+10)"
+vertical_alignment = 1
+
+[node name="SPD_LABEL" type="Label" parent="DETAILS/STATS"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.618667, 0.528, 0.8, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/line_spacing = -22
+theme_override_constants/shadow_offset_x = 6
+theme_override_constants/shadow_offset_y = 6
+theme_override_constants/outline_size = 20
+theme_override_constants/shadow_outline_size = 9
+theme_override_fonts/font = ExtResource("3_xvlgd")
+theme_override_font_sizes/font_size = 32
+text = "SPEED"
+vertical_alignment = 1
+
+[node name="SPD_STAT" type="HBoxContainer" parent="DETAILS/STATS"]
+layout_mode = 2
+theme_override_constants/separation = 13
+
+[node name="BASE" type="Label" parent="DETAILS/STATS/SPD_STAT"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.8, 0.8, 0.8, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/line_spacing = -22
+theme_override_constants/shadow_offset_x = 6
+theme_override_constants/shadow_offset_y = 6
+theme_override_constants/outline_size = 20
+theme_override_constants/shadow_outline_size = 9
+theme_override_fonts/font = ExtResource("3_xvlgd")
+theme_override_font_sizes/font_size = 48
+text = "100"
+vertical_alignment = 1
+
+[node name="BONUS" type="Label" parent="DETAILS/STATS/SPD_STAT"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.577008, 0.577008, 0.577008, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/line_spacing = -22
+theme_override_constants/shadow_offset_x = 6
+theme_override_constants/shadow_offset_y = 6
+theme_override_constants/outline_size = 20
+theme_override_constants/shadow_outline_size = 9
+theme_override_fonts/font = ExtResource("3_xvlgd")
+theme_override_font_sizes/font_size = 48
+text = "(+10)"
+vertical_alignment = 1
+
+[node name="PERKS" type="VBoxContainer" parent="DETAILS"]
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -517.0
+offset_top = 15.0
+offset_right = -174.0
+offset_bottom = -271.0
+grow_horizontal = 0
+grow_vertical = 2
+scale = Vector2(0.636083, 0.636083)
+
+[node name="ATK" type="Label" parent="DETAILS/PERKS"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/line_spacing = -22
+theme_override_constants/shadow_offset_x = 6
+theme_override_constants/shadow_offset_y = 6
+theme_override_constants/outline_size = 20
+theme_override_constants/shadow_outline_size = 9
+theme_override_fonts/font = ExtResource("3_xvlgd")
+theme_override_font_sizes/font_size = 32
+text = "PERKS:"
+vertical_alignment = 1
+
+[node name="ATK6" type="Label" parent="DETAILS/PERKS"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.77, 0.63525, 0.1925, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/line_spacing = -22
+theme_override_constants/shadow_offset_x = 6
+theme_override_constants/shadow_offset_y = 6
+theme_override_constants/outline_size = 20
+theme_override_constants/shadow_outline_size = 9
+theme_override_fonts/font = ExtResource("3_xvlgd")
+theme_override_font_sizes/font_size = 48
+text = "First Perk"
+vertical_alignment = 1
+
+[node name="ATK2" type="Label" parent="DETAILS/PERKS"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.55, 0.55, 0.55, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/line_spacing = -22
+theme_override_constants/shadow_offset_x = 6
+theme_override_constants/shadow_offset_y = 6
+theme_override_constants/outline_size = 20
+theme_override_constants/shadow_outline_size = 9
+theme_override_fonts/font = ExtResource("3_xvlgd")
+theme_override_font_sizes/font_size = 48
+text = "Second Perk"
+vertical_alignment = 1
+
+[node name="ATK3" type="Label" parent="DETAILS/PERKS"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.77, 0.63525, 0.1925, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/line_spacing = -22
+theme_override_constants/shadow_offset_x = 6
+theme_override_constants/shadow_offset_y = 6
+theme_override_constants/outline_size = 20
+theme_override_constants/shadow_outline_size = 9
+theme_override_fonts/font = ExtResource("3_xvlgd")
+theme_override_font_sizes/font_size = 48
+text = "Third Perk"
+vertical_alignment = 1
+
+[node name="ATK4" type="Label" parent="DETAILS/PERKS"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.77, 0.63525, 0.1925, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/line_spacing = -22
+theme_override_constants/shadow_offset_x = 6
+theme_override_constants/shadow_offset_y = 6
+theme_override_constants/outline_size = 20
+theme_override_constants/shadow_outline_size = 9
+theme_override_fonts/font = ExtResource("3_xvlgd")
+theme_override_font_sizes/font_size = 48
+text = "Forth Perk"
+vertical_alignment = 1
+
+[node name="ATK5" type="Label" parent="DETAILS/PERKS"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.55, 0.55, 0.55, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/line_spacing = -22
+theme_override_constants/shadow_offset_x = 6
+theme_override_constants/shadow_offset_y = 6
+theme_override_constants/outline_size = 20
+theme_override_constants/shadow_outline_size = 9
+theme_override_fonts/font = ExtResource("3_xvlgd")
+theme_override_font_sizes/font_size = 48
+text = "Fifth Perk"
+vertical_alignment = 1
+
+[node name="ITEM_DESC" type="VBoxContainer" parent="DETAILS"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -346.0
+offset_top = -94.0
+offset_right = 87.0
+offset_bottom = 37.0
+grow_horizontal = 0
+grow_vertical = 0
+scale = Vector2(0.535812, 0.535812)
+script = ExtResource("4_v1qm8")
+
+[node name="Name" type="Label" parent="DETAILS/ITEM_DESC"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.8, 0.8, 0.8, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/line_spacing = -22
+theme_override_constants/shadow_offset_x = 6
+theme_override_constants/shadow_offset_y = 6
+theme_override_constants/outline_size = 20
+theme_override_constants/shadow_outline_size = 9
+theme_override_fonts/font = ExtResource("3_xvlgd")
+theme_override_font_sizes/font_size = 48
+text = "Essence Reaver"
+horizontal_alignment = 2
+vertical_alignment = 1
+uppercase = true
+
+[node name="Tittle" type="Label" parent="DETAILS/ITEM_DESC"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.62, 0.62, 0.62, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/line_spacing = 7
+theme_override_constants/shadow_offset_x = 6
+theme_override_constants/shadow_offset_y = 6
+theme_override_constants/outline_size = 20
+theme_override_constants/shadow_outline_size = 9
+theme_override_fonts/font = ExtResource("3_xvlgd")
+theme_override_font_sizes/font_size = 36
+text = "ATK +47 | S. DEF + 74
+Creates Awesome Sauce"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="MINI_DESC" type="VBoxContainer" parent="DETAILS"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -226.0
+offset_top = -147.0
+offset_right = 295.0
+offset_bottom = -47.0
+grow_horizontal = 0
+grow_vertical = 0
+scale = Vector2(0.335924, 0.335924)
+alignment = 2
+script = ExtResource("4_v1qm8")
+
+[node name="Name" type="Label" parent="DETAILS/MINI_DESC"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.8, 0.8, 0.8, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/line_spacing = -22
+theme_override_constants/shadow_offset_x = 6
+theme_override_constants/shadow_offset_y = 6
+theme_override_constants/outline_size = 20
+theme_override_constants/shadow_outline_size = 9
+theme_override_fonts/font = ExtResource("3_xvlgd")
+theme_override_font_sizes/font_size = 48
+text = "LongSWORD"
+horizontal_alignment = 2
+vertical_alignment = 1
+uppercase = true
+
+[node name="Tittle" type="Label" parent="DETAILS/MINI_DESC"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.62, 0.62, 0.62, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/line_spacing = 7
+theme_override_constants/shadow_offset_x = 6
+theme_override_constants/shadow_offset_y = 6
+theme_override_constants/outline_size = 20
+theme_override_constants/shadow_outline_size = 9
+theme_override_fonts/font = ExtResource("3_xvlgd")
+theme_override_font_sizes/font_size = 48
+text = "ATK +5 "
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="MINI_DESC2" type="VBoxContainer" parent="DETAILS"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -226.0
+offset_top = -193.0
+offset_right = 295.0
+offset_bottom = -93.0
+grow_horizontal = 0
+grow_vertical = 0
+scale = Vector2(0.335924, 0.335924)
+alignment = 2
+script = ExtResource("4_v1qm8")
+
+[node name="Name" type="Label" parent="DETAILS/MINI_DESC2"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.8, 0.8, 0.8, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/line_spacing = -22
+theme_override_constants/shadow_offset_x = 6
+theme_override_constants/shadow_offset_y = 6
+theme_override_constants/outline_size = 20
+theme_override_constants/shadow_outline_size = 9
+theme_override_fonts/font = ExtResource("3_xvlgd")
+theme_override_font_sizes/font_size = 48
+text = "LongSWORD"
+horizontal_alignment = 2
+vertical_alignment = 1
+uppercase = true
+
+[node name="Tittle" type="Label" parent="DETAILS/MINI_DESC2"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.62, 0.62, 0.62, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/line_spacing = 7
+theme_override_constants/shadow_offset_x = 6
+theme_override_constants/shadow_offset_y = 6
+theme_override_constants/outline_size = 20
+theme_override_constants/shadow_outline_size = 9
+theme_override_fonts/font = ExtResource("3_xvlgd")
+theme_override_font_sizes/font_size = 48
+text = "ATK +5 "
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="MINI_DESC3" type="VBoxContainer" parent="DETAILS"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -226.0
+offset_top = -236.0
+offset_right = 295.0
+offset_bottom = -136.0
+grow_horizontal = 0
+grow_vertical = 0
+scale = Vector2(0.335924, 0.335924)
+alignment = 2
+script = ExtResource("4_v1qm8")
+
+[node name="Name" type="Label" parent="DETAILS/MINI_DESC3"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.8, 0.8, 0.8, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/line_spacing = -22
+theme_override_constants/shadow_offset_x = 6
+theme_override_constants/shadow_offset_y = 6
+theme_override_constants/outline_size = 20
+theme_override_constants/shadow_outline_size = 9
+theme_override_fonts/font = ExtResource("3_xvlgd")
+theme_override_font_sizes/font_size = 48
+text = "LongSWORD"
+horizontal_alignment = 2
+vertical_alignment = 1
+uppercase = true
+
+[node name="Tittle" type="Label" parent="DETAILS/MINI_DESC3"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.62, 0.62, 0.62, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/line_spacing = 7
+theme_override_constants/shadow_offset_x = 6
+theme_override_constants/shadow_offset_y = 6
+theme_override_constants/outline_size = 20
+theme_override_constants/shadow_outline_size = 9
+theme_override_fonts/font = ExtResource("3_xvlgd")
+theme_override_font_sizes/font_size = 48
+text = "ATK +5 "
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="MINI_DESC4" type="VBoxContainer" parent="DETAILS"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -226.0
+offset_top = -282.0
+offset_right = 295.0
+offset_bottom = -182.0
+grow_horizontal = 0
+grow_vertical = 0
+scale = Vector2(0.335924, 0.335924)
+alignment = 2
+script = ExtResource("4_v1qm8")
+
+[node name="Name" type="Label" parent="DETAILS/MINI_DESC4"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.8, 0.8, 0.8, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/line_spacing = -22
+theme_override_constants/shadow_offset_x = 6
+theme_override_constants/shadow_offset_y = 6
+theme_override_constants/outline_size = 20
+theme_override_constants/shadow_outline_size = 9
+theme_override_fonts/font = ExtResource("3_xvlgd")
+theme_override_font_sizes/font_size = 48
+text = "LongSWORD"
+horizontal_alignment = 2
+vertical_alignment = 1
+uppercase = true
+
+[node name="Tittle" type="Label" parent="DETAILS/MINI_DESC4"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.62, 0.62, 0.62, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/line_spacing = 7
+theme_override_constants/shadow_offset_x = 6
+theme_override_constants/shadow_offset_y = 6
+theme_override_constants/outline_size = 20
+theme_override_constants/shadow_outline_size = 9
+theme_override_fonts/font = ExtResource("3_xvlgd")
+theme_override_font_sizes/font_size = 48
+text = "ATK +5 "
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="MINI_DESC5" type="VBoxContainer" parent="DETAILS"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -226.0
+offset_top = -327.0
+offset_right = 295.0
+offset_bottom = -227.0
+grow_horizontal = 0
+grow_vertical = 0
+scale = Vector2(0.335924, 0.335924)
+alignment = 2
+script = ExtResource("4_v1qm8")
+
+[node name="Name" type="Label" parent="DETAILS/MINI_DESC5"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.8, 0.8, 0.8, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/line_spacing = -22
+theme_override_constants/shadow_offset_x = 6
+theme_override_constants/shadow_offset_y = 6
+theme_override_constants/outline_size = 20
+theme_override_constants/shadow_outline_size = 9
+theme_override_fonts/font = ExtResource("3_xvlgd")
+theme_override_font_sizes/font_size = 48
+text = "LongSWORD"
+horizontal_alignment = 2
+vertical_alignment = 1
+uppercase = true
+
+[node name="Tittle" type="Label" parent="DETAILS/MINI_DESC5"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.62, 0.62, 0.62, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/line_spacing = 7
+theme_override_constants/shadow_offset_x = 6
+theme_override_constants/shadow_offset_y = 6
+theme_override_constants/outline_size = 20
+theme_override_constants/shadow_outline_size = 9
+theme_override_fonts/font = ExtResource("3_xvlgd")
+theme_override_font_sizes/font_size = 48
+text = "ATK +5 "
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="INFO" type="Control" parent="."]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="NAME" type="Label" parent="INFO"]
+layout_mode = 1
+offset_top = 395.0
+offset_right = 390.0
+offset_bottom = 421.0
+rotation = -1.57079
+theme_override_colors/font_color = Color(0.77, 0.77, 0.77, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/line_spacing = -22
+theme_override_constants/shadow_offset_x = 6
+theme_override_constants/shadow_offset_y = 6
+theme_override_constants/outline_size = 20
+theme_override_constants/shadow_outline_size = 9
+theme_override_fonts/font = ExtResource("2_hxl0o")
+theme_override_font_sizes/font_size = 41
+text = "ABUKIM"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="COLOR" type="Label" parent="INFO"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 70.0
+offset_top = 2.0
+offset_right = 1.0
+offset_bottom = -550.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.77, 0.462, 0.462, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/line_spacing = -22
+theme_override_constants/shadow_offset_x = 6
+theme_override_constants/shadow_offset_y = 6
+theme_override_constants/outline_size = 20
+theme_override_constants/shadow_outline_size = 9
+theme_override_fonts/font = ExtResource("2_hxl0o")
+theme_override_font_sizes/font_size = 41
+text = "STR"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="COLOR2" type="Label" parent="INFO"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 70.0
+offset_top = 2.0
+offset_right = 1.0
+offset_bottom = -550.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.77, 0.462, 0.462, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/line_spacing = -22
+theme_override_constants/shadow_offset_x = 6
+theme_override_constants/shadow_offset_y = 6
+theme_override_constants/outline_size = 20
+theme_override_constants/shadow_outline_size = 9
+theme_override_fonts/font = ExtResource("2_hxl0o")
+theme_override_font_sizes/font_size = 41
+text = "STR"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="PERKS" type="Label" parent="INFO"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -97.0
+offset_top = -32.0
+offset_right = 268.0
+offset_bottom = 5.0
+grow_horizontal = 2
+scale = Vector2(0.54, 0.54)
+theme_override_colors/font_color = Color(0.84, 0.616, 0.3024, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/line_spacing = 8
+theme_override_constants/shadow_offset_x = 6
+theme_override_constants/shadow_offset_y = 6
+theme_override_constants/outline_size = 20
+theme_override_constants/shadow_outline_size = 9
+theme_override_fonts/font = ExtResource("2_hxl0o")
+theme_override_font_sizes/font_size = 41
+text = "3 PERKS ACTIVE"
+horizontal_alignment = 1
+
+[node name="ITEM" type="PanelContainer" parent="INFO"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -106.0
+offset_top = -106.0
+offset_right = -6.0
+offset_bottom = -6.0
+grow_horizontal = 0
+grow_vertical = 0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_883mq")
+
+[node name="ITEM" type="TextureRect" parent="INFO/ITEM"]
+show_behind_parent = true
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("6_55np6")
+expand_mode = 1
+
+[node name="S_ITEMS" type="VBoxContainer" parent="INFO"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -48.0
+offset_top = -354.0
+offset_right = 52.0
+offset_bottom = 254.0
+grow_horizontal = 0
+grow_vertical = 0
+scale = Vector2(0.4, 0.4)
+mouse_filter = 2
+theme_override_constants/separation = 12
+alignment = 2
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.5
+one_shot = true
+
+[node name="AP" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_xvlgd")
+}
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
